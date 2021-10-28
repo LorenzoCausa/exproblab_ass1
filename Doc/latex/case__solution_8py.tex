@@ -1,0 +1,57 @@
+\hypertarget{case__solution_8py}{}\doxysection{scripts/case\+\_\+solution.py File Reference}
+\label{case__solution_8py}\index{scripts/case\_solution.py@{scripts/case\_solution.py}}
+
+
+This node choose a random solution for the game and provide a service to check it.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcase__solution_1_1_solution}{case\+\_\+solution.\+Solution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecase__solution}{case\+\_\+solution}}
+\item 
+ \mbox{\hyperlink{namespaceexproblab__ass1}{exproblab\+\_\+ass1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecase__solution_ae1cb17d938269d90bfdef325eedf4caa}{case\+\_\+solution.\+cut\+\_\+\+I\+RI}} (my\+\_\+ind)
+\item 
+def \mbox{\hyperlink{namespacecase__solution_af6bd23b5a57f0ecdeedb70b66f9bbe81}{case\+\_\+solution.\+handle\+\_\+try\+\_\+\+HP}} (req)
+\item 
+def \mbox{\hyperlink{namespacecase__solution_a8a9e8896bbb1d80eb74b1c9dc773419a}{case\+\_\+solution.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecase__solution_a7048df7dee3a8cfefce7ad971df2e125}{case\+\_\+solution.\+solution}} = Solution()
+\begin{DoxyCompactList}\small\item\em Istance of the class \mbox{\hyperlink{classcase__solution_1_1_solution}{Solution}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node choose a random solution for the game and provide a service to check it. 
+
+\begin{DoxyAuthor}{Author}
+lorenzo Causa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/10/2021
+\end{DoxyDate}
+Clients \+: ~\newline
+ /armor\+\_\+interface\+\_\+srv
+
+Services \+: ~\newline
+ /try\+\_\+hypothesis
+
+Description\+: ~\newline
+
+
+This node chooses a random solution for the game and provide the service try\+\_\+hypothesis to check the correct hints of a hypothesis. This node needs to be run after \mbox{\hyperlink{namespaceupdate__ontology}{update\+\_\+ontology}} so that can access to the list of individuals of the ontology. 

@@ -1,0 +1,84 @@
+\hypertarget{_f_s_m_8py}{}\doxysection{scripts/\+F\+SM.py File Reference}
+\label{_f_s_m_8py}\index{scripts/FSM.py@{scripts/FSM.py}}
+
+
+This node provides the finite state machine.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_explore}{F\+S\+M.\+Explore}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_make__hypothesis}{F\+S\+M.\+Make\+\_\+hypothesis}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_try__hypothesis}{F\+S\+M.\+Try\+\_\+hypothesis}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_f_s_m}{F\+SM}}
+\item 
+ \mbox{\hyperlink{namespaceexproblab__ass1}{exproblab\+\_\+ass1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}{F\+S\+M.\+cut\+\_\+\+I\+RI}} (my\+\_\+ind)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ac67479309a22edc1037ed484aacd86cd}{F\+S\+M.\+move}} ()
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{F\+S\+M.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a0c914db8c267262ccf7128b90fb8eacc}{F\+S\+M.\+armor\+\_\+client}} = None
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a94b07d5fd64ea645e72494ac4ccd3af6}{F\+S\+M.\+hint\+\_\+gen\+\_\+client}} = None
+\item 
+\mbox{\hyperlink{namespace_f_s_m_ab1ca05bbcddaef8a1f621f22e6d2e943}{F\+S\+M.\+check\+\_\+\+H\+P\+\_\+client}} = None
+\item 
+\mbox{\hyperlink{namespace_f_s_m_ac98bb3d3d12dc587177b4e5a6fb40d22}{F\+S\+M.\+req}} = Armor\+Directive\+Req()
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a7f143454968cda1c7c24651bf5acda7a}{F\+S\+M.\+client\+\_\+name}}
+\item 
+\mbox{\hyperlink{namespace_f_s_m_a6c977e373c8eb30575b65be2559fa15c}{F\+S\+M.\+reference\+\_\+name}}
+\item 
+int \mbox{\hyperlink{namespace_f_s_m_a55082d09d4a8aae5b07c484078734d9f}{F\+S\+M.\+H\+P\+\_\+counter}} = 0
+\item 
+string \mbox{\hyperlink{namespace_f_s_m_ae6626b54f188d4e6ad382efafd3f3ee7}{F\+S\+M.\+path\+\_\+save\+\_\+ontology}} = \textquotesingle{}/root/ros\+\_\+ws/src/exproblab\+\_\+ass1/ontology\+\_\+case\+\_\+solved.\+owl\textquotesingle{}
+\item 
+bool \mbox{\hyperlink{namespace_f_s_m_a00e24bbcdd20b73ee52c7159d0b63397}{F\+S\+M.\+correct\+\_\+who}} = False
+\item 
+bool \mbox{\hyperlink{namespace_f_s_m_add4879835d007e7f8a193aa04c021647}{F\+S\+M.\+correct\+\_\+what}} = False
+\item 
+bool \mbox{\hyperlink{namespace_f_s_m_a84c0780ff22ea3a03e8d4af9a8ad0534}{F\+S\+M.\+correct\+\_\+where}} = False
+\item 
+int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{F\+S\+M.\+time\+\_\+sleep}} = 3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node provides the finite state machine. 
+
+\begin{DoxyAuthor}{Author}
+lorenzo Causa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/10/2021
+\end{DoxyDate}
+Clients \+: ~\newline
+ /hint\+\_\+generator
+
+/try\+\_\+hypothesis
+
+/armor\+\_\+interface\+\_\+srv
+
+Description\+: ~\newline
+
+
+This node implements the finite state machine thanks to smach and manages the investigation. It is the node to be run for last (smach\+\_\+viewer node is optional and it can be run in any moment). 
