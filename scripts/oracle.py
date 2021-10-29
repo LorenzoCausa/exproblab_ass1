@@ -40,6 +40,7 @@ class Hypothesis:
         self.murderer = []
         self.murder_weapon = []
         self.murder_place = []
+        self.ID=''
 
 def cut_IRI(my_ind):
     """ Very simple function that cut the IRI from a string received  from armor."""
@@ -75,23 +76,18 @@ def random_HP(hypotheses):
     #correct HP
     hypotheses[0].murderer.append(random.choice(persons))
     hypotheses[0].murder_weapon.append(random.choice(weapons))
-    hypotheses[0].murder_place.append(random.choice(places))  
+    hypotheses[0].murder_place.append(random.choice(places)) 
+    hypotheses[0].ID='HP0' 
      
     hypotheses[1].murderer.append(random.choice(persons))
     hypotheses[1].murder_weapon.append(random.choice(weapons))
     hypotheses[1].murder_place.append(random.choice(places)) 
+    hypotheses[1].ID='HP1'
     
     hypotheses[2].murderer.append(random.choice(persons))
     hypotheses[2].murder_weapon.append(random.choice(weapons))
     hypotheses[2].murder_place.append(random.choice(places)) 
-    
-    #hypotheses[3].murderer.append(random.choice(persons))
-    #hypotheses[3].murder_weapon.append(random.choice(weapons))
-    #hypotheses[3].murder_place.append(random.choice(places)) 
-    
-    #hypotheses[4].murderer.append(random.choice(persons))
-    #hypotheses[4].murder_weapon.append(random.choice(weapons))
-    #hypotheses[4].murder_place.append(random.choice(places))
+    hypotheses[2].ID='HP2'
     
     #choose solution
     solution = random.choice(hypotheses)	        
@@ -105,54 +101,24 @@ def random_HP(hypotheses):
     hypotheses[3].murderer.append(random.choice(persons))
     hypotheses[3].murderer.append(random.choice(persons))
     hypotheses[3].murderer.append(random.choice(persons))
-     
-    #hypotheses[6].murderer.append(random.choice(persons))
-    #hypotheses[6].murderer.append(random.choice(persons))
-    #hypotheses[6].murder_place.append(random.choice(places)) 
-    
-    #hypotheses[7].murderer.append(random.choice(persons))
-    #hypotheses[7].murderer.append(random.choice(persons))
-    #hypotheses[7].murder_weapon.append(random.choice(weapons))
-    
-    #hypotheses[8].murder_weapon.append(random.choice(weapons))
-    #hypotheses[8].murder_weapon.append(random.choice(weapons))
-    #hypotheses[8].murder_weapon.append(random.choice(weapons))
+    hypotheses[3].ID='HP3'
     
     hypotheses[4].murder_weapon.append(random.choice(weapons))
     hypotheses[4].murder_weapon.append(random.choice(weapons))
     hypotheses[4].murderer.append(random.choice(persons))
-
-    #hypotheses[10].murder_weapon.append(random.choice(weapons))
-    #hypotheses[10].murder_weapon.append(random.choice(weapons))
-    #hypotheses[10].murder_place.append(random.choice(places)) 
-    
-    #hypotheses[11].murder_place.append(random.choice(places))
-    #hypotheses[11].murder_place.append(random.choice(places))
-    #hypotheses[11].murder_place.append(random.choice(places))
-    
-    #hypotheses[12].murder_place.append(random.choice(places))
-    #hypotheses[12].murder_place.append(random.choice(places))
-    #hypotheses[12].murderer.append(random.choice(persons))
+    hypotheses[4].ID='HP4'
 
     hypotheses[5].murder_place.append(random.choice(places))
     hypotheses[5].murder_place.append(random.choice(places))
     hypotheses[5].murder_weapon.append(random.choice(weapons))  
+    hypotheses[5].ID='HP5'
     
     # wrong HP inconsistent
     hypotheses[6].murderer.append(random.choice(persons))
     hypotheses[6].murderer.append(random.choice(persons))
     hypotheses[6].murder_weapon.append(random.choice(weapons))
     hypotheses[6].murder_place.append(random.choice(places))  
-     
-    #hypotheses[15].murderer.append(random.choice(persons))
-    #hypotheses[15].murder_weapon.append(random.choice(weapons))
-    #hypotheses[15].murder_weapon.append(random.choice(weapons))
-    #hypotheses[15].murder_place.append(random.choice(places)) 
-    
-    #hypotheses[16].murderer.append(random.choice(persons))
-    #hypotheses[16].murder_weapon.append(random.choice(weapons))
-    #hypotheses[16].murder_place.append(random.choice(places)) 
-    #hypotheses[16].murder_place.append(random.choice(places)) 
+    hypotheses[6].ID='HP6'
     
     hypotheses[7].murderer.append(random.choice(persons))
     hypotheses[7].murderer.append(random.choice(persons))
@@ -160,24 +126,14 @@ def random_HP(hypotheses):
     hypotheses[7].murder_weapon.append(random.choice(weapons))
     hypotheses[7].murder_place.append(random.choice(places)) 
     hypotheses[7].murder_place.append(random.choice(places))
-    
-    #hypotheses[18].murderer.append(random.choice(persons))
-    #hypotheses[18].murderer.append(random.choice(persons))
-    #hypotheses[18].murderer.append(random.choice(persons))
-    #hypotheses[18].murder_weapon.append(random.choice(weapons))
-    #hypotheses[18].murder_place.append(random.choice(places))          
-    
-    #hypotheses[19].murderer.append(random.choice(persons))
-    #hypotheses[19].murder_weapon.append(random.choice(weapons))
-    #hypotheses[19].murder_weapon.append(random.choice(weapons))
-    #hypotheses[19].murder_weapon.append(random.choice(weapons)) 
-    #hypotheses[19].murder_place.append(random.choice(places))
+    hypotheses[7].ID='HP7'
 
     hypotheses[8].murderer.append(random.choice(persons))
     hypotheses[8].murder_weapon.append(random.choice(weapons))
     hypotheses[8].murder_place.append(random.choice(places)) 
     hypotheses[8].murder_place.append(random.choice(places)) 
     hypotheses[8].murder_place.append(random.choice(places)) 
+    hypotheses[8].ID='HP8'
     
     return        
     
@@ -248,10 +204,12 @@ def handle_hint_gen(req):
         murderer=HP.murderer[:]
         murder_weapon=HP.murder_weapon[:]
         murder_place=HP.murder_place[:]
+        ID=HP.ID
         # Put in rosparam the current hypothesis
         rospy.set_param('current_murderer_hypothesis', murderer)
         rospy.set_param('current_murder_weapon_hypothesis', murder_weapon)
         rospy.set_param('current_murder_place_hypothesis', murder_place)
+        rospy.set_param('current_ID_hypothesis', ID)
         # print for debug
         #print(murderer)
         #print(murder_weapon)
