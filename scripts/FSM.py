@@ -77,7 +77,7 @@ def cut_all_IRI(ind_array):
     return ind_array
   
 def add_HP(HP):
-    """Add an hypothesis in to the ontology"""	
+    """Add an hypothesis in to the current ontology"""	
     # ADD  HYPOTHESIS
     global HP_counter
     req = ArmorDirectiveReq()
@@ -115,7 +115,7 @@ def add_HP(HP):
     return
     
 def check_HP():
-    """Check with the ontologi if the last hypothesis is completed and consistent"""	
+    """Check with the ontologiìy if the last hypothesis is completed and consistent"""	
     ok=False
     req = ArmorDirectiveReq()
     req.client_name = 'FSM'
@@ -162,6 +162,7 @@ def save_ontology():
     return
 
 def put_hint_in_HP(hint,HP):
+    '''Put my hint in the current Hypothesys'''
     if(hint.which_hint=='who'):
         HP.murderer.append(hint.hint)
     if(hint.which_hint=='what'):
@@ -198,7 +199,9 @@ class Search_hints(smach.State):
         search_hints_client('')
         hint = hint_gen_client(userdata.first)
         put_hint_in_HP(hint,HP)
-        print(userdata.first)
+        # print('first: ',userdata.first)
+        print('Hint found: ',hint.hint)
+        
         if(userdata.first):
             userdata.first=False
 
@@ -207,23 +210,24 @@ class Search_hints(smach.State):
             return 'search_another_room' 
             
         else:    
+            # Hypothesis finished (all hints found)
             #print(HP)
             userdata.first=True
             add_HP(HP )
             good_HP=check_HP()
             if(good_HP):
-                print('Valid hypothesis')
+                print('Valid hypothesis!')
                 return 'go_cluedo_room'
                 
             else:
-                print('Inconsistent or incomplete hypoyhesis')
+                print('Hypothesis finished but inconsistent or incomplete')
                 HP.murderer=[]
                 HP.murder_weapon=[]
                 HP.murder_place=[]
                 return 'search_another_room'    
 
                     			    
-# define state make_hypothesis
+# define state Try_hypothesis
 class Try_hypothesis(smach.State):
     """ State in which the investigator tries its hypothesis. """
     def __init__(self):
@@ -236,6 +240,7 @@ class Try_hypothesis(smach.State):
         print('Who: ',HP.murderer[0])
         print('What: ',HP.murder_weapon[0])
         print('Where: ',HP.murder_place[0])
+        # Test my Hypothesis
         res=check_HP_client(HP.murderer[0],HP.murder_weapon[0],HP.murder_place[0])
         if res.ok:
             save_ontology()

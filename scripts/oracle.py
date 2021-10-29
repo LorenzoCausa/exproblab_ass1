@@ -19,7 +19,7 @@
 # Description:  
 #  
 # This node is the oracle of the game, it generate a finite number of Hypotheses
-# and provide services to interact in the game.
+# and provide services to interact with it in the game.
 #
 
 import roslib
@@ -68,7 +68,7 @@ def random_HP(hypotheses):
     places=query_ontology(source3)
     places=cut_all_IRI(places)
     
-    for i in range(5):
+    for i in range(3):
         HP = Hypothesis()
         hypotheses.append(HP)
         
@@ -85,99 +85,99 @@ def random_HP(hypotheses):
     hypotheses[2].murder_weapon.append(random.choice(weapons))
     hypotheses[2].murder_place.append(random.choice(places)) 
     
-    hypotheses[3].murderer.append(random.choice(persons))
-    hypotheses[3].murder_weapon.append(random.choice(weapons))
-    hypotheses[3].murder_place.append(random.choice(places)) 
+    #hypotheses[3].murderer.append(random.choice(persons))
+    #hypotheses[3].murder_weapon.append(random.choice(weapons))
+    #hypotheses[3].murder_place.append(random.choice(places)) 
     
-    hypotheses[4].murderer.append(random.choice(persons))
-    hypotheses[4].murder_weapon.append(random.choice(weapons))
-    hypotheses[4].murder_place.append(random.choice(places))
+    #hypotheses[4].murderer.append(random.choice(persons))
+    #hypotheses[4].murder_weapon.append(random.choice(weapons))
+    #hypotheses[4].murder_place.append(random.choice(places))
     
     #choose solution
     solution = random.choice(hypotheses)	        
     load_solution_in_ontology(solution)
     
-    for i in range(16):
+    for i in range(6):
         HP = Hypothesis()
         hypotheses.append(HP)
         
-    # wrong HP (All possibles not complete)
-    hypotheses[5].murderer.append(random.choice(persons))
-    hypotheses[5].murderer.append(random.choice(persons))
-    hypotheses[5].murderer.append(random.choice(persons))
+    # wrong HP not complete
+    hypotheses[3].murderer.append(random.choice(persons))
+    hypotheses[3].murderer.append(random.choice(persons))
+    hypotheses[3].murderer.append(random.choice(persons))
      
+    #hypotheses[6].murderer.append(random.choice(persons))
+    #hypotheses[6].murderer.append(random.choice(persons))
+    #hypotheses[6].murder_place.append(random.choice(places)) 
+    
+    #hypotheses[7].murderer.append(random.choice(persons))
+    #hypotheses[7].murderer.append(random.choice(persons))
+    #hypotheses[7].murder_weapon.append(random.choice(weapons))
+    
+    #hypotheses[8].murder_weapon.append(random.choice(weapons))
+    #hypotheses[8].murder_weapon.append(random.choice(weapons))
+    #hypotheses[8].murder_weapon.append(random.choice(weapons))
+    
+    hypotheses[4].murder_weapon.append(random.choice(weapons))
+    hypotheses[4].murder_weapon.append(random.choice(weapons))
+    hypotheses[4].murderer.append(random.choice(persons))
+
+    #hypotheses[10].murder_weapon.append(random.choice(weapons))
+    #hypotheses[10].murder_weapon.append(random.choice(weapons))
+    #hypotheses[10].murder_place.append(random.choice(places)) 
+    
+    #hypotheses[11].murder_place.append(random.choice(places))
+    #hypotheses[11].murder_place.append(random.choice(places))
+    #hypotheses[11].murder_place.append(random.choice(places))
+    
+    #hypotheses[12].murder_place.append(random.choice(places))
+    #hypotheses[12].murder_place.append(random.choice(places))
+    #hypotheses[12].murderer.append(random.choice(persons))
+
+    hypotheses[5].murder_place.append(random.choice(places))
+    hypotheses[5].murder_place.append(random.choice(places))
+    hypotheses[5].murder_weapon.append(random.choice(weapons))  
+    
+    # wrong HP inconsistent
     hypotheses[6].murderer.append(random.choice(persons))
     hypotheses[6].murderer.append(random.choice(persons))
-    hypotheses[6].murder_place.append(random.choice(places)) 
+    hypotheses[6].murder_weapon.append(random.choice(weapons))
+    hypotheses[6].murder_place.append(random.choice(places))  
+     
+    #hypotheses[15].murderer.append(random.choice(persons))
+    #hypotheses[15].murder_weapon.append(random.choice(weapons))
+    #hypotheses[15].murder_weapon.append(random.choice(weapons))
+    #hypotheses[15].murder_place.append(random.choice(places)) 
+    
+    #hypotheses[16].murderer.append(random.choice(persons))
+    #hypotheses[16].murder_weapon.append(random.choice(weapons))
+    #hypotheses[16].murder_place.append(random.choice(places)) 
+    #hypotheses[16].murder_place.append(random.choice(places)) 
     
     hypotheses[7].murderer.append(random.choice(persons))
     hypotheses[7].murderer.append(random.choice(persons))
     hypotheses[7].murder_weapon.append(random.choice(weapons))
+    hypotheses[7].murder_weapon.append(random.choice(weapons))
+    hypotheses[7].murder_place.append(random.choice(places)) 
+    hypotheses[7].murder_place.append(random.choice(places))
     
-    hypotheses[8].murder_weapon.append(random.choice(weapons))
-    hypotheses[8].murder_weapon.append(random.choice(weapons))
-    hypotheses[8].murder_weapon.append(random.choice(weapons))
+    #hypotheses[18].murderer.append(random.choice(persons))
+    #hypotheses[18].murderer.append(random.choice(persons))
+    #hypotheses[18].murderer.append(random.choice(persons))
+    #hypotheses[18].murder_weapon.append(random.choice(weapons))
+    #hypotheses[18].murder_place.append(random.choice(places))          
     
-    hypotheses[9].murder_weapon.append(random.choice(weapons))
-    hypotheses[9].murder_weapon.append(random.choice(weapons))
-    hypotheses[9].murderer.append(random.choice(persons))
+    #hypotheses[19].murderer.append(random.choice(persons))
+    #hypotheses[19].murder_weapon.append(random.choice(weapons))
+    #hypotheses[19].murder_weapon.append(random.choice(weapons))
+    #hypotheses[19].murder_weapon.append(random.choice(weapons)) 
+    #hypotheses[19].murder_place.append(random.choice(places))
 
-    hypotheses[10].murder_weapon.append(random.choice(weapons))
-    hypotheses[10].murder_weapon.append(random.choice(weapons))
-    hypotheses[10].murder_place.append(random.choice(places)) 
-    
-    hypotheses[11].murder_place.append(random.choice(places))
-    hypotheses[11].murder_place.append(random.choice(places))
-    hypotheses[11].murder_place.append(random.choice(places))
-    
-    hypotheses[12].murder_place.append(random.choice(places))
-    hypotheses[12].murder_place.append(random.choice(places))
-    hypotheses[12].murderer.append(random.choice(persons))
-
-    hypotheses[13].murder_place.append(random.choice(places))
-    hypotheses[13].murder_place.append(random.choice(places))
-    hypotheses[13].murder_weapon.append(random.choice(weapons))  
-    
-    # wrong HP inconsistent
-    hypotheses[14].murderer.append(random.choice(persons))
-    hypotheses[14].murderer.append(random.choice(persons))
-    hypotheses[14].murder_weapon.append(random.choice(weapons))
-    hypotheses[14].murder_place.append(random.choice(places))  
-     
-    hypotheses[15].murderer.append(random.choice(persons))
-    hypotheses[15].murder_weapon.append(random.choice(weapons))
-    hypotheses[15].murder_weapon.append(random.choice(weapons))
-    hypotheses[15].murder_place.append(random.choice(places)) 
-    
-    hypotheses[16].murderer.append(random.choice(persons))
-    hypotheses[16].murder_weapon.append(random.choice(weapons))
-    hypotheses[16].murder_place.append(random.choice(places)) 
-    hypotheses[16].murder_place.append(random.choice(places)) 
-    
-    hypotheses[17].murderer.append(random.choice(persons))
-    hypotheses[17].murderer.append(random.choice(persons))
-    hypotheses[17].murder_weapon.append(random.choice(weapons))
-    hypotheses[17].murder_weapon.append(random.choice(weapons))
-    hypotheses[17].murder_place.append(random.choice(places)) 
-    hypotheses[17].murder_place.append(random.choice(places))
-    
-    hypotheses[18].murderer.append(random.choice(persons))
-    hypotheses[18].murderer.append(random.choice(persons))
-    hypotheses[18].murderer.append(random.choice(persons))
-    hypotheses[18].murder_weapon.append(random.choice(weapons))
-    hypotheses[18].murder_place.append(random.choice(places))          
-    
-    hypotheses[19].murderer.append(random.choice(persons))
-    hypotheses[19].murder_weapon.append(random.choice(weapons))
-    hypotheses[19].murder_weapon.append(random.choice(weapons))
-    hypotheses[19].murder_weapon.append(random.choice(weapons)) 
-    hypotheses[19].murder_place.append(random.choice(places))
-
-    hypotheses[20].murderer.append(random.choice(persons))
-    hypotheses[20].murder_weapon.append(random.choice(weapons))
-    hypotheses[20].murder_place.append(random.choice(places)) 
-    hypotheses[20].murder_place.append(random.choice(places)) 
-    hypotheses[20].murder_place.append(random.choice(places)) 
+    hypotheses[8].murderer.append(random.choice(persons))
+    hypotheses[8].murder_weapon.append(random.choice(weapons))
+    hypotheses[8].murder_place.append(random.choice(places)) 
+    hypotheses[8].murder_place.append(random.choice(places)) 
+    hypotheses[8].murder_place.append(random.choice(places)) 
     
     return        
     
@@ -241,16 +241,18 @@ def handle_hint_gen(req):
     global hypotheses,murderer,murder_weapon,murder_place
     res = hint_genResponse() 
     res.last=False
+    # If first take a new HP
     if req.first:
         HP=random.choice(hypotheses)
         hypotheses.remove(HP)
         murderer=HP.murderer[:]
         murder_weapon=HP.murder_weapon[:]
         murder_place=HP.murder_place[:]
-        print(murderer)
-        print(murder_weapon)
-        print(murder_place)
-    
+        #print(murderer)
+        #print(murder_weapon)
+        #print(murder_place)
+        
+    # The hints found go in order: who, what, where. This is just for simplify the code, the FSM is independent from this and could take hints in any order.
     if(murderer!=[]):
         res.which_hint='who'
         res.hint=murderer[0]
@@ -269,7 +271,7 @@ def handle_hint_gen(req):
     if(murderer==[] and murder_weapon==[] and murder_place==[]):
         res.last=True
         
-    print (res)
+    #print (res)
     return res
     
     

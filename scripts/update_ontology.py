@@ -15,8 +15,10 @@
 # Description:    
 # 
 # This simple node loads the cluedo ontology and adds all the hints of Cluedo, 
-# also it set all the hints in the ros parameters. This node needs to be  
-# run after armor, since it has a client that use its service. 
+# also it set all the sources in the ros parameters. This node needs to be  
+# run after armor, since it has a client that use its service. All hints are 
+# uploaded from the start for avoid to reason each time we add a new hint 
+# (and reason again for the disjoint).
 #
 
 import roslib
@@ -114,7 +116,7 @@ def main():
     req.args = ['']
     res = armor_client(req)
     
-    # Disjoint all
+    # Disjoint all (need to disjoint after the reason than reason again)
     req.command = 'DISJOINT'
     req.primary_command_spec = 'IND'
     req.secondary_command_spec = 'CLASS'
