@@ -8,9 +8,11 @@ This node provides the finite state machine.
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{class_f_s_m_1_1_hypothesis}{F\+S\+M.\+Hypothesis}}
+\item 
 class \mbox{\hyperlink{class_f_s_m_1_1_explore}{F\+S\+M.\+Explore}}
 \item 
-class \mbox{\hyperlink{class_f_s_m_1_1_make__hypothesis}{F\+S\+M.\+Make\+\_\+hypothesis}}
+class \mbox{\hyperlink{class_f_s_m_1_1_search__hints}{F\+S\+M.\+Search\+\_\+hints}}
 \item 
 class \mbox{\hyperlink{class_f_s_m_1_1_try__hypothesis}{F\+S\+M.\+Try\+\_\+hypothesis}}
 \end{DoxyCompactItemize}
@@ -26,7 +28,17 @@ class \mbox{\hyperlink{class_f_s_m_1_1_try__hypothesis}{F\+S\+M.\+Try\+\_\+hypot
 \item 
 def \mbox{\hyperlink{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}{F\+S\+M.\+cut\+\_\+\+I\+RI}} (my\+\_\+ind)
 \item 
-def \mbox{\hyperlink{namespace_f_s_m_ac67479309a22edc1037ed484aacd86cd}{F\+S\+M.\+move}} ()
+def \mbox{\hyperlink{namespace_f_s_m_a06f1380cfe335033929434199a51ee6d}{F\+S\+M.\+cut\+\_\+all\+\_\+\+I\+RI}} (ind\+\_\+array)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ad01aaadb4e10f6d0bb61a4d7e49a3b75}{F\+S\+M.\+add\+\_\+\+HP}} (HP)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a4f9bfb10403c9eeda1156a8170440790}{F\+S\+M.\+check\+\_\+\+HP}} ()
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a4de7fc2ae7ff771119da82c3710eadc9}{F\+S\+M.\+query\+\_\+ontology}} (ont\+\_\+class)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a7e68ac198e292d51e14c5470a7990a57}{F\+S\+M.\+save\+\_\+ontology}} ()
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ae90f9c9bda527f9ed264db66e6d0d376}{F\+S\+M.\+put\+\_\+hint\+\_\+in\+\_\+\+HP}} (hint, HP)
 \item 
 def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{F\+S\+M.\+main}} ()
 \end{DoxyCompactItemize}
@@ -39,23 +51,19 @@ def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{F\+S\+M.
 \item 
 \mbox{\hyperlink{namespace_f_s_m_ab1ca05bbcddaef8a1f621f22e6d2e943}{F\+S\+M.\+check\+\_\+\+H\+P\+\_\+client}} = None
 \item 
-\mbox{\hyperlink{namespace_f_s_m_ac98bb3d3d12dc587177b4e5a6fb40d22}{F\+S\+M.\+req}} = Armor\+Directive\+Req()
+\mbox{\hyperlink{namespace_f_s_m_aa8a2d7a070d0bf2340096bcb220134d5}{F\+S\+M.\+move\+\_\+turtle\+\_\+client}} = None
 \item 
-\mbox{\hyperlink{namespace_f_s_m_a7f143454968cda1c7c24651bf5acda7a}{F\+S\+M.\+client\+\_\+name}}
-\item 
-\mbox{\hyperlink{namespace_f_s_m_a6c977e373c8eb30575b65be2559fa15c}{F\+S\+M.\+reference\+\_\+name}}
+\mbox{\hyperlink{namespace_f_s_m_a28db637b4aef0e720844b13b31eff68b}{F\+S\+M.\+search\+\_\+hints\+\_\+client}} = None
 \item 
 int \mbox{\hyperlink{namespace_f_s_m_a55082d09d4a8aae5b07c484078734d9f}{F\+S\+M.\+H\+P\+\_\+counter}} = 0
 \item 
 string \mbox{\hyperlink{namespace_f_s_m_ae6626b54f188d4e6ad382efafd3f3ee7}{F\+S\+M.\+path\+\_\+save\+\_\+ontology}} = \textquotesingle{}/root/ros\+\_\+ws/src/exproblab\+\_\+ass1/ontology\+\_\+case\+\_\+solved.\+owl\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Path in which you want to save the solution ontology. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_f_s_m_a2210950c6d235cd73bfe6d68cb48df81}{F\+S\+M.\+current\+\_\+pose}} = Pose()
 \item 
-bool \mbox{\hyperlink{namespace_f_s_m_a00e24bbcdd20b73ee52c7159d0b63397}{F\+S\+M.\+correct\+\_\+who}} = False
+list \mbox{\hyperlink{namespace_f_s_m_ac99bfc7fd2e0ce2d6522d6060733953c}{F\+S\+M.\+rooms}} = \mbox{[}$\,$\mbox{]}
 \item 
-bool \mbox{\hyperlink{namespace_f_s_m_add4879835d007e7f8a193aa04c021647}{F\+S\+M.\+correct\+\_\+what}} = False
-\item 
-bool \mbox{\hyperlink{namespace_f_s_m_a84c0780ff22ea3a03e8d4af9a8ad0534}{F\+S\+M.\+correct\+\_\+where}} = False
-\item 
-int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{F\+S\+M.\+time\+\_\+sleep}} = 3
+\mbox{\hyperlink{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}{F\+S\+M.\+HP}} = None
 \end{DoxyCompactItemize}
 
 
@@ -77,6 +85,10 @@ Clients \+: ~\newline
 /try\+\_\+hypothesis
 
 /armor\+\_\+interface\+\_\+srv
+
+/move\+\_\+turtle\+\_\+service
+
+/search\+\_\+hints\+\_\+service
 
 Description\+: ~\newline
 

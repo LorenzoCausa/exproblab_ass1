@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['time_5fsleep_39',['time_sleep',['../namespace_f_s_m.html#a592393f8a4cc53d2c4246601c6528385',1,'FSM']]],
-  ['try_5fhypothesis_40',['Try_hypothesis',['../class_f_s_m_1_1_try__hypothesis.html',1,'FSM']]]
+  ['query_5fontology_38',['query_ontology',['../namespace_f_s_m.html#a4de7fc2ae7ff771119da82c3710eadc9',1,'FSM.query_ontology()'],['../namespaceoracle.html#a1e1ffdb8220ac408b975c01b5625691b',1,'oracle.query_ontology()']]]
 ];

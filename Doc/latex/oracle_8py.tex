@@ -1,0 +1,75 @@
+\hypertarget{oracle_8py}{}\doxysection{scripts/oracle.py File Reference}
+\label{oracle_8py}\index{scripts/oracle.py@{scripts/oracle.py}}
+
+
+This node choose a random hypoyheses for the game and provide a service to check it.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classoracle_1_1_hypothesis}{oracle.\+Hypothesis}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceoracle}{oracle}}
+\item 
+ \mbox{\hyperlink{namespaceexproblab__ass1}{exproblab\+\_\+ass1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceoracle_aced2159f9fe7f6bc615e5513275b008f}{oracle.\+cut\+\_\+\+I\+RI}} (my\+\_\+ind)
+\item 
+def \mbox{\hyperlink{namespaceoracle_aca747daa6112a36ef225b77dfb6a044e}{oracle.\+cut\+\_\+all\+\_\+\+I\+RI}} (ind\+\_\+array)
+\item 
+def \mbox{\hyperlink{namespaceoracle_aa87e948d09b8a997e1046cb4e611ccea}{oracle.\+random\+\_\+\+HP}} (hypotheses)
+\item 
+def \mbox{\hyperlink{namespaceoracle_af0dd57e20770a6c24039d3f9036ab396}{oracle.\+load\+\_\+solution\+\_\+in\+\_\+ontology}} (solution)
+\item 
+def \mbox{\hyperlink{namespaceoracle_a1e1ffdb8220ac408b975c01b5625691b}{oracle.\+query\+\_\+ontology}} (ont\+\_\+class)
+\item 
+def \mbox{\hyperlink{namespaceoracle_a9abd43da9a2a2b6532ff89fa34d1c7c3}{oracle.\+handle\+\_\+try\+\_\+\+HP}} (req)
+\item 
+def \mbox{\hyperlink{namespaceoracle_a80447d6e7f2c2627a452c127dd5fc6b8}{oracle.\+handle\+\_\+hint\+\_\+gen}} (req)
+\item 
+def \mbox{\hyperlink{namespaceoracle_a5ac7249c0bad890a9f43d54c5b413399}{oracle.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceoracle_ab8d6d750904857037e7402a6065b0f02}{oracle.\+solution}} = Hypothesis()
+\item 
+list \mbox{\hyperlink{namespaceoracle_a579aa25c47eaf8a3f7d76d45d7683e8f}{oracle.\+hypotheses}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceoracle_a2d702a5caa6c65b823bb2e2464cebe16}{oracle.\+murderer}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceoracle_a84ef726d40885b8a911c2929e93190ef}{oracle.\+murder\+\_\+weapon}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceoracle_a0071fff16fb249533b8ffe9b611b0930}{oracle.\+murder\+\_\+place}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node choose a random hypoyheses for the game and provide a service to check it. 
+
+\begin{DoxyAuthor}{Author}
+lorenzo Causa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/10/2021
+\end{DoxyDate}
+Clients \+: ~\newline
+ /armor\+\_\+interface\+\_\+srv
+
+Services \+: ~\newline
+ /try\+\_\+hypothesis /hint\+\_\+generator
+
+Description\+: ~\newline
+
+
+This node is the oracle of the game, it generate a finite number of Hypotheses and provide services to interact with it in the game. 

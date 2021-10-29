@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['load_5fsolution_5fin_5fontology_64',['load_solution_in_ontology',['../classcase__solution_1_1_solution.html#af80dbaadeab4dd35dd3592708a54238b',1,'case_solution::Solution']]]
+  ['handle_5fhint_5fgen_77',['handle_hint_gen',['../namespaceoracle.html#a80447d6e7f2c2627a452c127dd5fc6b8',1,'oracle']]],
+  ['handle_5ftry_5fhp_78',['handle_try_HP',['../namespaceoracle.html#a9abd43da9a2a2b6532ff89fa34d1c7c3',1,'oracle']]]
 ];

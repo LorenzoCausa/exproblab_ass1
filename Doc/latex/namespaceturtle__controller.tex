@@ -1,0 +1,99 @@
+\hypertarget{namespaceturtle__controller}{}\doxysection{turtle\+\_\+controller Namespace Reference}
+\label{namespaceturtle__controller}\index{turtle\_controller@{turtle\_controller}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_ad988d2adae2c30b3fdb0c2b986526bc8}{target\+\_\+coord}} (room)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_a7e75981042c2d395b51ef4cc08dae44d}{search\+\_\+hints}} (req)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_a83d664ee97d2993317ae3f9c9f2115e6}{move}} (req)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_abf9d51c63289271ebb2b37fac7923f8c}{update\+\_\+pose}} (data)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_ae28d539d1a10e43fc93abeae991b04b1}{euclidean\+\_\+distance}} (x\+\_\+target, y\+\_\+target)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_abbaf19e2d21ff886fc3939f1100cf986}{linear\+\_\+vel}} (x\+\_\+target, y\+\_\+target, constant=1.\+5)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_afd3f5bc75a2035a9638f48e3d7027a4e}{steering\+\_\+angle}} (x\+\_\+target, y\+\_\+target)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_a37271a5f8134264899e3f4147f1c86b3}{angular\+\_\+vel}} (x\+\_\+target, y\+\_\+target, constant=10)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_ae57ebe0ffd7963364c5fd53058954240}{normalize\+\_\+angle}} (angle)
+\item 
+def \mbox{\hyperlink{namespaceturtle__controller_a1735e41702ff658e466bad1431b75e4b}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceturtle__controller_a37271a5f8134264899e3f4147f1c86b3}\label{namespaceturtle__controller_a37271a5f8134264899e3f4147f1c86b3}} 
+\index{turtle\_controller@{turtle\_controller}!angular\_vel@{angular\_vel}}
+\index{angular\_vel@{angular\_vel}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{angular\_vel()}{angular\_vel()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+angular\+\_\+vel (\begin{DoxyParamCaption}\item[{}]{x\+\_\+target,  }\item[{}]{y\+\_\+target,  }\item[{}]{constant = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}compute the correct angular vel\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_ae28d539d1a10e43fc93abeae991b04b1}\label{namespaceturtle__controller_ae28d539d1a10e43fc93abeae991b04b1}} 
+\index{turtle\_controller@{turtle\_controller}!euclidean\_distance@{euclidean\_distance}}
+\index{euclidean\_distance@{euclidean\_distance}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{euclidean\_distance()}{euclidean\_distance()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+euclidean\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{x\+\_\+target,  }\item[{}]{y\+\_\+target }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Euclidean distance between current pose and the goal.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_abbaf19e2d21ff886fc3939f1100cf986}\label{namespaceturtle__controller_abbaf19e2d21ff886fc3939f1100cf986}} 
+\index{turtle\_controller@{turtle\_controller}!linear\_vel@{linear\_vel}}
+\index{linear\_vel@{linear\_vel}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{linear\_vel()}{linear\_vel()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+linear\+\_\+vel (\begin{DoxyParamCaption}\item[{}]{x\+\_\+target,  }\item[{}]{y\+\_\+target,  }\item[{}]{constant = {\ttfamily 1.5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}compute the correct linear vel\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_a1735e41702ff658e466bad1431b75e4b}\label{namespaceturtle__controller_a1735e41702ff658e466bad1431b75e4b}} 
+\index{turtle\_controller@{turtle\_controller}!main@{main}}
+\index{main@{main}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}main of the turtle_controller node.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_a83d664ee97d2993317ae3f9c9f2115e6}\label{namespaceturtle__controller_a83d664ee97d2993317ae3f9c9f2115e6}} 
+\index{turtle\_controller@{turtle\_controller}!move@{move}}
+\index{move@{move}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+move (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to simulate the movements of the investigator. \end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_ae57ebe0ffd7963364c5fd53058954240}\label{namespaceturtle__controller_ae57ebe0ffd7963364c5fd53058954240}} 
+\index{turtle\_controller@{turtle\_controller}!normalize\_angle@{normalize\_angle}}
+\index{normalize\_angle@{normalize\_angle}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{normalize\_angle()}{normalize\_angle()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+normalize\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}"It normalize the target angle\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_a7e75981042c2d395b51ef4cc08dae44d}\label{namespaceturtle__controller_a7e75981042c2d395b51ef4cc08dae44d}} 
+\index{turtle\_controller@{turtle\_controller}!search\_hints@{search\_hints}}
+\index{search\_hints@{search\_hints}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{search\_hints()}{search\_hints()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+search\+\_\+hints (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Simulate the searching of hints in a room by rotating our investigator (the turtle)\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_afd3f5bc75a2035a9638f48e3d7027a4e}\label{namespaceturtle__controller_afd3f5bc75a2035a9638f48e3d7027a4e}} 
+\index{turtle\_controller@{turtle\_controller}!steering\_angle@{steering\_angle}}
+\index{steering\_angle@{steering\_angle}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{steering\_angle()}{steering\_angle()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+steering\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{x\+\_\+target,  }\item[{}]{y\+\_\+target }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}compute the correct steering angle\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_ad988d2adae2c30b3fdb0c2b986526bc8}\label{namespaceturtle__controller_ad988d2adae2c30b3fdb0c2b986526bc8}} 
+\index{turtle\_controller@{turtle\_controller}!target\_coord@{target\_coord}}
+\index{target\_coord@{target\_coord}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{target\_coord()}{target\_coord()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+target\+\_\+coord (\begin{DoxyParamCaption}\item[{}]{room }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the position of a given room, the positions are more or less the same as the ones in the real Cluedo game.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceturtle__controller_abf9d51c63289271ebb2b37fac7923f8c}\label{namespaceturtle__controller_abf9d51c63289271ebb2b37fac7923f8c}} 
+\index{turtle\_controller@{turtle\_controller}!update\_pose@{update\_pose}}
+\index{update\_pose@{update\_pose}!turtle\_controller@{turtle\_controller}}
+\doxysubsubsection{\texorpdfstring{update\_pose()}{update\_pose()}}
+{\footnotesize\ttfamily def turtle\+\_\+controller.\+update\+\_\+pose (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function which is called when a new message of type Pose is received by the subscriber.\end{DoxyVerb}
+ 

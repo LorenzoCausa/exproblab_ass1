@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cut_5firi_60',['cut_IRI',['../namespacecase__solution.html#ae1cb17d938269d90bfdef325eedf4caa',1,'case_solution.cut_IRI()'],['../namespace_f_s_m.html#a77debcfd8f8d1e63f8bf053613f3632f',1,'FSM.cut_IRI()']]]
+  ['add_5fhp_70',['add_HP',['../namespace_f_s_m.html#ad01aaadb4e10f6d0bb61a4d7e49a3b75',1,'FSM']]],
+  ['angular_5fvel_71',['angular_vel',['../namespaceturtle__controller.html#a37271a5f8134264899e3f4147f1c86b3',1,'turtle_controller']]]
 ];

@@ -5,7 +5,9 @@
 \item 
 class \mbox{\hyperlink{class_f_s_m_1_1_explore}{Explore}}
 \item 
-class \mbox{\hyperlink{class_f_s_m_1_1_make__hypothesis}{Make\+\_\+hypothesis}}
+class \mbox{\hyperlink{class_f_s_m_1_1_hypothesis}{Hypothesis}}
+\item 
+class \mbox{\hyperlink{class_f_s_m_1_1_search__hints}{Search\+\_\+hints}}
 \item 
 class \mbox{\hyperlink{class_f_s_m_1_1_try__hypothesis}{Try\+\_\+hypothesis}}
 \end{DoxyCompactItemize}
@@ -14,7 +16,17 @@ class \mbox{\hyperlink{class_f_s_m_1_1_try__hypothesis}{Try\+\_\+hypothesis}}
 \item 
 def \mbox{\hyperlink{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}{cut\+\_\+\+I\+RI}} (my\+\_\+ind)
 \item 
-def \mbox{\hyperlink{namespace_f_s_m_ac67479309a22edc1037ed484aacd86cd}{move}} ()
+def \mbox{\hyperlink{namespace_f_s_m_a06f1380cfe335033929434199a51ee6d}{cut\+\_\+all\+\_\+\+I\+RI}} (ind\+\_\+array)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ad01aaadb4e10f6d0bb61a4d7e49a3b75}{add\+\_\+\+HP}} (\mbox{\hyperlink{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}{HP}})
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a4f9bfb10403c9eeda1156a8170440790}{check\+\_\+\+HP}} ()
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a4de7fc2ae7ff771119da82c3710eadc9}{query\+\_\+ontology}} (ont\+\_\+class)
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_a7e68ac198e292d51e14c5470a7990a57}{save\+\_\+ontology}} ()
+\item 
+def \mbox{\hyperlink{namespace_f_s_m_ae90f9c9bda527f9ed264db66e6d0d376}{put\+\_\+hint\+\_\+in\+\_\+\+HP}} (hint, \mbox{\hyperlink{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}{HP}})
 \item 
 def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{main}} ()
 \end{DoxyCompactItemize}
@@ -27,28 +39,45 @@ def \mbox{\hyperlink{namespace_f_s_m_acc99b577ee61be1b7cc0e2baae140224}{main}} (
 \item 
 \mbox{\hyperlink{namespace_f_s_m_ab1ca05bbcddaef8a1f621f22e6d2e943}{check\+\_\+\+H\+P\+\_\+client}} = None
 \item 
-\mbox{\hyperlink{namespace_f_s_m_ac98bb3d3d12dc587177b4e5a6fb40d22}{req}} = Armor\+Directive\+Req()
+\mbox{\hyperlink{namespace_f_s_m_aa8a2d7a070d0bf2340096bcb220134d5}{move\+\_\+turtle\+\_\+client}} = None
 \item 
-\mbox{\hyperlink{namespace_f_s_m_a7f143454968cda1c7c24651bf5acda7a}{client\+\_\+name}}
-\item 
-\mbox{\hyperlink{namespace_f_s_m_a6c977e373c8eb30575b65be2559fa15c}{reference\+\_\+name}}
+\mbox{\hyperlink{namespace_f_s_m_a28db637b4aef0e720844b13b31eff68b}{search\+\_\+hints\+\_\+client}} = None
 \item 
 int \mbox{\hyperlink{namespace_f_s_m_a55082d09d4a8aae5b07c484078734d9f}{H\+P\+\_\+counter}} = 0
 \item 
 string \mbox{\hyperlink{namespace_f_s_m_ae6626b54f188d4e6ad382efafd3f3ee7}{path\+\_\+save\+\_\+ontology}} = \textquotesingle{}/root/ros\+\_\+ws/src/exproblab\+\_\+ass1/ontology\+\_\+case\+\_\+solved.\+owl\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Path in which you want to save the solution ontology. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_f_s_m_a2210950c6d235cd73bfe6d68cb48df81}{current\+\_\+pose}} = Pose()
 \item 
-bool \mbox{\hyperlink{namespace_f_s_m_a00e24bbcdd20b73ee52c7159d0b63397}{correct\+\_\+who}} = False
+list \mbox{\hyperlink{namespace_f_s_m_ac99bfc7fd2e0ce2d6522d6060733953c}{rooms}} = \mbox{[}$\,$\mbox{]}
 \item 
-bool \mbox{\hyperlink{namespace_f_s_m_add4879835d007e7f8a193aa04c021647}{correct\+\_\+what}} = False
-\item 
-bool \mbox{\hyperlink{namespace_f_s_m_a84c0780ff22ea3a03e8d4af9a8ad0534}{correct\+\_\+where}} = False
-\item 
-int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{time\+\_\+sleep}} = 3
+\mbox{\hyperlink{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}{HP}} = None
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}\label{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}} 
+\mbox{\Hypertarget{namespace_f_s_m_ad01aaadb4e10f6d0bb61a4d7e49a3b75}\label{namespace_f_s_m_ad01aaadb4e10f6d0bb61a4d7e49a3b75}} 
+\index{FSM@{FSM}!add\_HP@{add\_HP}}
+\index{add\_HP@{add\_HP}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{add\_HP()}{add\_HP()}}
+{\footnotesize\ttfamily def F\+S\+M.\+add\+\_\+\+HP (\begin{DoxyParamCaption}\item[{}]{HP }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add an hypothesis in to the current ontology\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_f_s_m_a4f9bfb10403c9eeda1156a8170440790}\label{namespace_f_s_m_a4f9bfb10403c9eeda1156a8170440790}} 
+\index{FSM@{FSM}!check\_HP@{check\_HP}}
+\index{check\_HP@{check\_HP}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{check\_HP()}{check\_HP()}}
+{\footnotesize\ttfamily def F\+S\+M.\+check\+\_\+\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check with the ontologiìy if the last hypothesis is completed and consistent\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_f_s_m_a06f1380cfe335033929434199a51ee6d}\label{namespace_f_s_m_a06f1380cfe335033929434199a51ee6d}} 
+\index{FSM@{FSM}!cut\_all\_IRI@{cut\_all\_IRI}}
+\index{cut\_all\_IRI@{cut\_all\_IRI}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{cut\_all\_IRI()}{cut\_all\_IRI()}}
+{\footnotesize\ttfamily def F\+S\+M.\+cut\+\_\+all\+\_\+\+I\+RI (\begin{DoxyParamCaption}\item[{}]{ind\+\_\+array }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Very simple function that cut the IRI from an array of strings received  from armor.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}\label{namespace_f_s_m_a77debcfd8f8d1e63f8bf053613f3632f}} 
 \index{FSM@{FSM}!cut\_IRI@{cut\_IRI}}
 \index{cut\_IRI@{cut\_IRI}!FSM@{FSM}}
 \doxysubsubsection{\texorpdfstring{cut\_IRI()}{cut\_IRI()}}
@@ -62,13 +91,27 @@ int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{time\+\_
 {\footnotesize\ttfamily def F\+S\+M.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}main of the node, it creates ros clients and initialize the state machine for the investigation.\end{DoxyVerb}
- \mbox{\Hypertarget{namespace_f_s_m_ac67479309a22edc1037ed484aacd86cd}\label{namespace_f_s_m_ac67479309a22edc1037ed484aacd86cd}} 
-\index{FSM@{FSM}!move@{move}}
-\index{move@{move}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{move()}{move()}}
-{\footnotesize\ttfamily def F\+S\+M.\+move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{namespace_f_s_m_ae90f9c9bda527f9ed264db66e6d0d376}\label{namespace_f_s_m_ae90f9c9bda527f9ed264db66e6d0d376}} 
+\index{FSM@{FSM}!put\_hint\_in\_HP@{put\_hint\_in\_HP}}
+\index{put\_hint\_in\_HP@{put\_hint\_in\_HP}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{put\_hint\_in\_HP()}{put\_hint\_in\_HP()}}
+{\footnotesize\ttfamily def F\+S\+M.\+put\+\_\+hint\+\_\+in\+\_\+\+HP (\begin{DoxyParamCaption}\item[{}]{hint,  }\item[{}]{HP }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}Function to simulate the movements of the investigator. \end{DoxyVerb}
+\begin{DoxyVerb}Put my hint in the current Hypothesys\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_f_s_m_a4de7fc2ae7ff771119da82c3710eadc9}\label{namespace_f_s_m_a4de7fc2ae7ff771119da82c3710eadc9}} 
+\index{FSM@{FSM}!query\_ontology@{query\_ontology}}
+\index{query\_ontology@{query\_ontology}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{query\_ontology()}{query\_ontology()}}
+{\footnotesize\ttfamily def F\+S\+M.\+query\+\_\+ontology (\begin{DoxyParamCaption}\item[{}]{ont\+\_\+class }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}It get stuff from my ontology\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_f_s_m_a7e68ac198e292d51e14c5470a7990a57}\label{namespace_f_s_m_a7e68ac198e292d51e14c5470a7990a57}} 
+\index{FSM@{FSM}!save\_ontology@{save\_ontology}}
+\index{save\_ontology@{save\_ontology}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{save\_ontology()}{save\_ontology()}}
+{\footnotesize\ttfamily def F\+S\+M.\+save\+\_\+ontology (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}save the ontology_solution in the path in which you want the ontology\end{DoxyVerb}
  
 
 \doxysubsection{Variable Documentation}
@@ -84,29 +127,11 @@ int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{time\+\_
 \doxysubsubsection{\texorpdfstring{check\_HP\_client}{check\_HP\_client}}
 {\footnotesize\ttfamily F\+S\+M.\+check\+\_\+\+H\+P\+\_\+client = None}
 
-\mbox{\Hypertarget{namespace_f_s_m_a7f143454968cda1c7c24651bf5acda7a}\label{namespace_f_s_m_a7f143454968cda1c7c24651bf5acda7a}} 
-\index{FSM@{FSM}!client\_name@{client\_name}}
-\index{client\_name@{client\_name}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{client\_name}{client\_name}}
-{\footnotesize\ttfamily F\+S\+M.\+client\+\_\+name}
-
-\mbox{\Hypertarget{namespace_f_s_m_add4879835d007e7f8a193aa04c021647}\label{namespace_f_s_m_add4879835d007e7f8a193aa04c021647}} 
-\index{FSM@{FSM}!correct\_what@{correct\_what}}
-\index{correct\_what@{correct\_what}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{correct\_what}{correct\_what}}
-{\footnotesize\ttfamily bool F\+S\+M.\+correct\+\_\+what = False}
-
-\mbox{\Hypertarget{namespace_f_s_m_a84c0780ff22ea3a03e8d4af9a8ad0534}\label{namespace_f_s_m_a84c0780ff22ea3a03e8d4af9a8ad0534}} 
-\index{FSM@{FSM}!correct\_where@{correct\_where}}
-\index{correct\_where@{correct\_where}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{correct\_where}{correct\_where}}
-{\footnotesize\ttfamily bool F\+S\+M.\+correct\+\_\+where = False}
-
-\mbox{\Hypertarget{namespace_f_s_m_a00e24bbcdd20b73ee52c7159d0b63397}\label{namespace_f_s_m_a00e24bbcdd20b73ee52c7159d0b63397}} 
-\index{FSM@{FSM}!correct\_who@{correct\_who}}
-\index{correct\_who@{correct\_who}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{correct\_who}{correct\_who}}
-{\footnotesize\ttfamily bool F\+S\+M.\+correct\+\_\+who = False}
+\mbox{\Hypertarget{namespace_f_s_m_a2210950c6d235cd73bfe6d68cb48df81}\label{namespace_f_s_m_a2210950c6d235cd73bfe6d68cb48df81}} 
+\index{FSM@{FSM}!current\_pose@{current\_pose}}
+\index{current\_pose@{current\_pose}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{current\_pose}{current\_pose}}
+{\footnotesize\ttfamily F\+S\+M.\+current\+\_\+pose = Pose()}
 
 \mbox{\Hypertarget{namespace_f_s_m_a94b07d5fd64ea645e72494ac4ccd3af6}\label{namespace_f_s_m_a94b07d5fd64ea645e72494ac4ccd3af6}} 
 \index{FSM@{FSM}!hint\_gen\_client@{hint\_gen\_client}}
@@ -114,11 +139,23 @@ int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{time\+\_
 \doxysubsubsection{\texorpdfstring{hint\_gen\_client}{hint\_gen\_client}}
 {\footnotesize\ttfamily F\+S\+M.\+hint\+\_\+gen\+\_\+client = None}
 
+\mbox{\Hypertarget{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}\label{namespace_f_s_m_aa0f78690dbb45aa7336477e43de2814b}} 
+\index{FSM@{FSM}!HP@{HP}}
+\index{HP@{HP}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{HP}{HP}}
+{\footnotesize\ttfamily F\+S\+M.\+HP = None}
+
 \mbox{\Hypertarget{namespace_f_s_m_a55082d09d4a8aae5b07c484078734d9f}\label{namespace_f_s_m_a55082d09d4a8aae5b07c484078734d9f}} 
 \index{FSM@{FSM}!HP\_counter@{HP\_counter}}
 \index{HP\_counter@{HP\_counter}!FSM@{FSM}}
 \doxysubsubsection{\texorpdfstring{HP\_counter}{HP\_counter}}
 {\footnotesize\ttfamily int F\+S\+M.\+H\+P\+\_\+counter = 0}
+
+\mbox{\Hypertarget{namespace_f_s_m_aa8a2d7a070d0bf2340096bcb220134d5}\label{namespace_f_s_m_aa8a2d7a070d0bf2340096bcb220134d5}} 
+\index{FSM@{FSM}!move\_turtle\_client@{move\_turtle\_client}}
+\index{move\_turtle\_client@{move\_turtle\_client}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{move\_turtle\_client}{move\_turtle\_client}}
+{\footnotesize\ttfamily F\+S\+M.\+move\+\_\+turtle\+\_\+client = None}
 
 \mbox{\Hypertarget{namespace_f_s_m_ae6626b54f188d4e6ad382efafd3f3ee7}\label{namespace_f_s_m_ae6626b54f188d4e6ad382efafd3f3ee7}} 
 \index{FSM@{FSM}!path\_save\_ontology@{path\_save\_ontology}}
@@ -126,22 +163,19 @@ int \mbox{\hyperlink{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}{time\+\_
 \doxysubsubsection{\texorpdfstring{path\_save\_ontology}{path\_save\_ontology}}
 {\footnotesize\ttfamily string F\+S\+M.\+path\+\_\+save\+\_\+ontology = \textquotesingle{}/root/ros\+\_\+ws/src/exproblab\+\_\+ass1/ontology\+\_\+case\+\_\+solved.\+owl\textquotesingle{}}
 
-\hypertarget{namespace_f_s_m_autotoc_md0}{}\doxysubsubsection{Path in which you want to save the solution ontology.}\label{namespace_f_s_m_autotoc_md0}
-\mbox{\Hypertarget{namespace_f_s_m_a6c977e373c8eb30575b65be2559fa15c}\label{namespace_f_s_m_a6c977e373c8eb30575b65be2559fa15c}} 
-\index{FSM@{FSM}!reference\_name@{reference\_name}}
-\index{reference\_name@{reference\_name}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{reference\_name}{reference\_name}}
-{\footnotesize\ttfamily F\+S\+M.\+reference\+\_\+name}
 
-\mbox{\Hypertarget{namespace_f_s_m_ac98bb3d3d12dc587177b4e5a6fb40d22}\label{namespace_f_s_m_ac98bb3d3d12dc587177b4e5a6fb40d22}} 
-\index{FSM@{FSM}!req@{req}}
-\index{req@{req}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{req}{req}}
-{\footnotesize\ttfamily F\+S\+M.\+req = Armor\+Directive\+Req()}
 
-\mbox{\Hypertarget{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}\label{namespace_f_s_m_a592393f8a4cc53d2c4246601c6528385}} 
-\index{FSM@{FSM}!time\_sleep@{time\_sleep}}
-\index{time\_sleep@{time\_sleep}!FSM@{FSM}}
-\doxysubsubsection{\texorpdfstring{time\_sleep}{time\_sleep}}
-{\footnotesize\ttfamily int F\+S\+M.\+time\+\_\+sleep = 3}
+Path in which you want to save the solution ontology. 
+
+\mbox{\Hypertarget{namespace_f_s_m_ac99bfc7fd2e0ce2d6522d6060733953c}\label{namespace_f_s_m_ac99bfc7fd2e0ce2d6522d6060733953c}} 
+\index{FSM@{FSM}!rooms@{rooms}}
+\index{rooms@{rooms}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{rooms}{rooms}}
+{\footnotesize\ttfamily list F\+S\+M.\+rooms = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespace_f_s_m_a28db637b4aef0e720844b13b31eff68b}\label{namespace_f_s_m_a28db637b4aef0e720844b13b31eff68b}} 
+\index{FSM@{FSM}!search\_hints\_client@{search\_hints\_client}}
+\index{search\_hints\_client@{search\_hints\_client}!FSM@{FSM}}
+\doxysubsubsection{\texorpdfstring{search\_hints\_client}{search\_hints\_client}}
+{\footnotesize\ttfamily F\+S\+M.\+search\+\_\+hints\+\_\+client = None}
 
