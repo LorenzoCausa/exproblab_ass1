@@ -57,9 +57,9 @@ def cut_all_IRI(ind_array):
 def random_HP(hypotheses):
     """Generate finite random set of hipotheses, some correct, some wrong. Needed otherwhise to many possibilities would lead to a very long game """
     global solution
-    source1=rospy.get_param("who")
-    source2=rospy.get_param("what")
-    source3=rospy.get_param("where")
+    source1=rospy.get_param("source1")
+    source2=rospy.get_param("source2")
+    source3=rospy.get_param("source3")
     
     persons=query_ontology(source1)
     persons=cut_all_IRI(persons)
@@ -248,6 +248,11 @@ def handle_hint_gen(req):
         murderer=HP.murderer[:]
         murder_weapon=HP.murder_weapon[:]
         murder_place=HP.murder_place[:]
+        # Put in rosparam the current hypothesis
+        rospy.set_param('current_murderer_hypothesis', murderer)
+        rospy.set_param('current_murder_weapon_hypothesis', murder_weapon)
+        rospy.set_param('current_murder_place_hypothesis', murder_place)
+        # print for debug
         #print(murderer)
         #print(murder_weapon)
         #print(murder_place)

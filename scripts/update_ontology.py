@@ -135,10 +135,10 @@ def main():
     res = armor_client(req)
     
     
-    #add all hints in ros param
-    rospy.set_param('who', 'PERSON')
-    rospy.set_param('what', 'WEAPON')
-    rospy.set_param('where', 'PLACE')
+    #add all hint sources in ros param
+    rospy.set_param('source1', 'PERSON')
+    rospy.set_param('source2', 'WEAPON')
+    rospy.set_param('source3', 'PLACE')
     
     print('Finished!')
 
