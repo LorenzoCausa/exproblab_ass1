@@ -259,10 +259,7 @@
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis1">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
         <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Dagger"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Lead Pipe"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Hall"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Billiard Room"/>
-        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. White"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Kitchen"/>
         <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Prof. Plum"/>
     </owl:NamedIndividual>
     
@@ -273,8 +270,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis2">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Lead Pipe"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Study"/>
+        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Spanner"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Library"/>
         <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Col. Mustard"/>
     </owl:NamedIndividual>
     
@@ -330,8 +327,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#SOLUTION">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Lead Pipe"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Study"/>
+        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Spanner"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Library"/>
         <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Col. Mustard"/>
     </owl:NamedIndividual>
     
