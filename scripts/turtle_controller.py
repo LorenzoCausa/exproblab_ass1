@@ -19,6 +19,12 @@
 #   Publisher:<BR>
 #
 #   /turtle1/cmd_vel
+#
+#   Services: <BR>
+#
+#   /move_service
+#
+#   /search_hint_service
 #          
 # Description:    
 # 
