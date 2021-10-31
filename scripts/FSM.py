@@ -237,9 +237,7 @@ class Try_hypothesis(smach.State):
         global HP
         move_turtle_client('Cluedo Room')
         print('Hypothesis: ')
-        print('Who: ',HP.murderer[0])
-        print('What: ',HP.murder_weapon[0])
-        print('Where: ',HP.murder_place[0])
+        print(HP.murderer[0],' with the ',HP.murder_weapon[0],' in the ',HP.murder_place[0])
         # Test my Hypothesis
         res=check_HP_client(HP.murderer[0],HP.murder_weapon[0],HP.murder_place[0])
         if res.ok:

@@ -199,12 +199,12 @@ def handle_hint_gen(req):
     res.last=False
     # If first take a new HP
     if req.first:
-        HP=random.choice(hypotheses)
-        hypotheses.remove(HP)
+        HP=random.choice(hypotheses)        
         murderer=HP.murderer[:]
         murder_weapon=HP.murder_weapon[:]
         murder_place=HP.murder_place[:]
         ID=HP.ID
+        hypotheses.remove(HP)
         # Put in rosparam the current hypothesis
         rospy.set_param('current_murderer_hypothesis', murderer)
         rospy.set_param('current_murder_weapon_hypothesis', murder_weapon)
