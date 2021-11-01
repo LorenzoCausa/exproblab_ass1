@@ -12,8 +12,16 @@ In the diagram below you can see all the nodes necessary for the correct functio
 * **armor_service**: This is the node provided to us to manage ontologies. It is a powerful and versatile management system for single and multi-ontology architectures under ROS. It allows to load, query, and modify multiple ontologies. Despite its ease of use, ARMOR provides a large share of OWL APIs functions and capabilities in a simple server-client architecture and offers increased flexibility compared to previous ontological systems running under ROS.
 
 * **oracle**:  This node is the oracle of the game, it generates a finite number of hypotheses and provides two services to interact with them:
-  * hint_generator to request a hint of a hypothesis 
-  * try_hypothesis to check if my guess is correct
+  * hint_generator: It request a hint of an hypothesis. 
+  * try_hypothesis: Check if my guess is correct.
+
+* **FSM**: Implement a finite state machine that simulates the investigation using smach. It has four clients that it uses to interact with other nodes. More information about the behavior of this node will be provided in the State Diagram section of the README.
+
+* **turtle_controller**: This node provides two services to command the turtlebot which simulates the investigator in the environment:
+  * move_turtle_service: Move the turtle to the room you want.
+  * search_hint_service: Spin the turtle a random time to simulate searching for clues in a room.
+
+* **turtlesim_node**: Standard node of ros.
 
 ![Alt text](/images/component.PNG?raw=true)
 
