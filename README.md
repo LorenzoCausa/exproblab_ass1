@@ -16,6 +16,8 @@ This is a ROS package that simulates a simple Cluedo-like investigation. It uses
 ### RQT Graph
 ![Alt text](/images/rqt_graph.jpeg?raw=true)
 
+## Cluedo Map
+
 ## Put Correct Paths
 Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"
 
