@@ -39,9 +39,17 @@ In the diagram below you can see all the states of the finite state machine impl
 ![Alt text](/images/state.PNG?raw=true)
 
 ### Temporal Diagram
+In the diagram below you can see the behavior of the code over time.
+ 
+1) "update_ontology" is executed.
+2) Once the ontology is ready (loaded and updated) the Oracle node generates a finite set of random hypotheses: 3 valid, 3 incomplete and 3 inconsistent. From the set of complete hypotheses it will choose a solution.
+3) Now that all the services are ready also "FSM" can start and with it the investigation, which will end once the state machine has managed to find the hypothesis that "oracle" has chosen as the solution.
+
 ![Alt text](/images/temporal.PNG?raw=true)
 
 ### RQT Graph
+Graph generato da $ rosrun rqt_graph rqt_graph. Evidenzia tutti i nodi attivi e le sottoscrizioni ai relativi topics. 
+
 ![Alt text](/images/rqt_graph.jpeg?raw=true)
 
 ### Cluedo Map
