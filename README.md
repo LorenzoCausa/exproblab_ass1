@@ -63,22 +63,22 @@ This image represents the cluedo map superimposed on the world of turtlesim. Unf
 
 ### List of msgs, srvs and rosparameters
 #### msgs
-* Twist: to publish the speeds and control the turtle
-* Pose: to subscribe and know the current position of the turtle
+* **Twist**: to publish the speeds and control the turtle
+* **Pose**: to subscribe and know the current position of the turtle
 #### srvs
-* armor_interface_srv: to interact with the armor node and the ontology
-* hint_generator: to request a hint from the oracle
-* try_hypothesis: to check if the hypothesis is correct
-* move_service: to move the turtle in rooms
-* search_hint_service: to move the turtle in a way that simulates searching for hints in a room
+* **armor_interface_srv**: to interact with the armor node and the ontology
+* **hint_generator**: to request a hint from the oracle
+* **try_hypothesis**: to check if the hypothesis is correct
+* **move_service**: to move the turtle in rooms
+* **search_hint_service**: to move the turtle in a way that simulates searching for hints in a room
 #### rosparameters
-* current_ID_hypothesis: it gives you the ID of the current hypothesis
-* current_murderer_hypothesis: it gives you the murderers (if plural clearly the hypothesis is not valid) of the current hypothesis
-* current_murder_weapon_hypothesis: it gives you the murder weapons (if plural clearly the hypothesis is not valid) of the current hypothesis
-* current_murder_place_hypothesis: it gives you the murder places (if plural clearly the hypothesis is not valid) of the current hypothesis
-* source1: it gives you the first source of informations (PERSON)
-* source2: it gives you the second source of informations (WEAPON)
-* source3: it gives you the third source of informations (PLACE)
+* **current_ID_hypothesis**: it gives you the ID of the current hypothesis
+* **current_murderer_hypothesis**: it gives you the murderers (if plural clearly the hypothesis is not valid) of the current hypothesis
+* **current_murder_weapon_hypothesis**: it gives you the murder weapons (if plural clearly the hypothesis is not valid) of the current hypothesis
+* **current_murder_place_hypothesis**: it gives you the murder places (if plural clearly the hypothesis is not valid) of the current hypothesis
+* **source1**: it gives you the first source of informations (PERSON)
+* **source2**: it gives you the second source of informations (WEAPON)
+* **source3**: it gives you the third source of informations (PLACE)
 
 
 ## Put Correct Paths
