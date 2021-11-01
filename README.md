@@ -26,6 +26,16 @@ In the diagram below you can see all the nodes necessary for the correct functio
 ![Alt text](/images/component.PNG?raw=true)
 
 ### State Diagram
+In the diagram below you can see all the states of the finite state machine implemented in the node "FSM" thanks to smach.
+
+* **EXPLORE**: In this state, the investigator moves to a random room to look for hints
+
+* **SEARCH_HINTS**: The investigator looks for a hint, once it is found if this ends the hypothesis and if the hypothesis is valid (complete and consistent) then it goes to the TRY_HYPOTHESIS state otherwise it goes back to the EXPLORE state. The cycle continues until a valid hypothesis is found.
+
+* **TRY_HYPOTHESIS**: The valid hypothesis found is tested, if it is correct the game ends, if wrong it returns to the EXPLORE state.
+
+* **Case solved**: Congratulation! You found the solution!
+
 ![Alt text](/images/state.PNG?raw=true)
 
 ### Temporal Diagram
@@ -34,8 +44,10 @@ In the diagram below you can see all the nodes necessary for the correct functio
 ### RQT Graph
 ![Alt text](/images/rqt_graph.jpeg?raw=true)
 
-## Cluedo Map
+### Cluedo Map
 ![Alt text](/images/turtle_map.PNG?raw=true)
+
+### List og msgs and srv
 
 ## Put Correct Paths
 Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"
