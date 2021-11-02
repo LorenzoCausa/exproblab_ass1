@@ -119,3 +119,13 @@ If you prefer you can also run a node at a time. In this case it is good to run 
 7) FSM 
 
 **Note**: smach_viewer is optional and it can be run in any moment 
+
+## Behavior
+1) The investigator (the turtle) moves into a random room.
+2) Look for hints in the room (turn on itself)
+3) If with the last hint found concludes a valid hypothesis then it passes to 4. otherwise it restarts from 1.
+4) Go to the Cluedo Room and test his hypothesis. If it is correct the case is solved, on the contrary it goes back to 1.
+
+**note**: This cycle continues until the case is solved, however the execution is never too long as each time a hypothesis is tested it is removed from the finite list of possible hypotheses.
+
+![Alt Text](/images/turtle_gif.gif?raw=true)
