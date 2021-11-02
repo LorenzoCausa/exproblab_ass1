@@ -102,7 +102,7 @@ Go in "update_ontology.py" and put the path in which there is your cluedo_ontolo
 
 Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology"
 
-**Note**: If you use the docker you gave us the paths are already written correctly
+**Note**: If you use the docker that was provided to us the paths are already written correctly.
 
 ### Running procedure
 Just use the launcher:
