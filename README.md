@@ -128,4 +128,4 @@ If you prefer you can also run a node at a time. In this case it is good to run 
 
 **note**: This cycle continues until the case is solved, however the execution is never too long as each time a hypothesis is tested it is removed from the finite list of possible hypotheses.
 
-![Alt Text](/images/turtle_gif.gif?raw=true)
+![Alt Text](/images/my_turtle_gif.gif?raw=true)
