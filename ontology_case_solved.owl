@@ -258,9 +258,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis1">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Rope"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Spanner"/>
-        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Rev. Green"/>
+        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Dagger"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Billiard Room"/>
+        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. Peacock"/>
     </owl:NamedIndividual>
     
 
@@ -270,32 +270,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis2">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. White"/>
-        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Rev. Green"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.emarolab.it/cluedo-ontology#Hypothesis3 -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis3">
-        <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Spanner"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Library"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Dining Room"/>
-        <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. White"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.emarolab.it/cluedo-ontology#Hypothesis4 -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#Hypothesis4">
-        <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Revolver"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Library"/>
+        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Candlestick"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Billiard Room"/>
         <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. Peacock"/>
     </owl:NamedIndividual>
     
@@ -351,8 +327,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.emarolab.it/cluedo-ontology#SOLUTION">
         <rdf:type rdf:resource="http://www.emarolab.it/cluedo-ontology#HYPOTHESIS"/>
-        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Revolver"/>
-        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Library"/>
+        <what rdf:resource="http://www.emarolab.it/cluedo-ontology#Candlestick"/>
+        <where rdf:resource="http://www.emarolab.it/cluedo-ontology#Billiard Room"/>
         <who rdf:resource="http://www.emarolab.it/cluedo-ontology#Mrs. Peacock"/>
     </owl:NamedIndividual>
     

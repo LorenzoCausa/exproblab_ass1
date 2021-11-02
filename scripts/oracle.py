@@ -18,8 +18,8 @@
 #          
 # Description:  
 #  
-# This node is the oracle of the game, it generate a finite number of Hypotheses
-# and provide services to interact with it in the game.
+# This node is the oracle of the game, it generates a finite number of Hypotheses
+# and provides services to interact with them in the game.
 #
 
 import roslib
