@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['oracle_32',['oracle',['../namespaceoracle.html',1,'']]],
-  ['oracle_2epy_33',['oracle.py',['../oracle_8py.html',1,'']]]
+  ['normalize_5fangle_33',['normalize_angle',['../namespaceturtle__controller.html#ae57ebe0ffd7963364c5fd53058954240',1,'turtle_controller']]]
 ];

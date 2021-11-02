@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['random_5fhp_39',['random_HP',['../namespaceoracle.html#aa87e948d09b8a997e1046cb4e611ccea',1,'oracle']]],
-  ['readme_2emd_40',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rooms_41',['rooms',['../namespace_f_s_m.html#ac99bfc7fd2e0ce2d6522d6060733953c',1,'FSM']]]
+  ['query_5fontology_39',['query_ontology',['../namespace_f_s_m.html#a4de7fc2ae7ff771119da82c3710eadc9',1,'FSM.query_ontology()'],['../namespaceoracle.html#a1e1ffdb8220ac408b975c01b5625691b',1,'oracle.query_ontology()']]]
 ];

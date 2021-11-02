@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>exproblab_ass1: PUT CORRECT PATHS</title>
+<title>exproblab_ass1: Experimental Robotics Laboratory assignment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,9 +23,9 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">exproblab_ass1
-   &#160;<span id="projectnumber">first assignment of Experimental Robotics Laboratory</span>
+   &#160;<span id="projectnumber">Causa Lorenzo 4519089</span>
    </div>
-   <div id="projectbrief">Lorenzo Causa 4519089</div>
+   <div id="projectbrief">first assignment of experimental robotics laboratory course</div>
   </td>
  </tr>
  </tbody>
@@ -65,10 +65,89 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">PUT CORRECT PATHS </div>  </div>
+<div class="title">Experimental Robotics Laboratory assignment </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"</p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Introduction</h1>
+<p>This is a ROS package that simulates a simple Cluedo-like investigation. It uses ARMOR as reasoner and container of the ontology of the game and smach for the Finite State Machine behavior.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Software Architecture</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Component Diagram</h2>
+<p>In the diagram below you can see all the nodes necessary for the correct functioning of the code. smach_viewer is not there as it is only useful for displaying the states while the code is running (so it is not necessary but optional).</p>
+<ul>
+<li><b><a class="el" href="namespaceupdate__ontology.html">update_ontology</a></b>: This node loads the "cluedo_ontology" into "armor" and adds all cluedo hints. This is done only once for the beginning of everything to decrease the number of REASON that armor has to do, in fact every time an individual is added it is necessary to reason twice: ADD, REASON, DISJOINT and REASON again. It also loads possible hint sources into rosparam: PERSON, WEAPON and PLACE. This node must be run after "armor" after it is completed "oracle" and "FSM" can be run.</li>
+<li><b>armor_service</b>: This is the node provided to us to manage ontologies. It is a powerful and versatile management system for single and multi-ontology architectures under ROS. It allows to load, query, and modify multiple ontologies. Despite its ease of use, ARMOR provides a large share of OWL APIs functions and capabilities in a simple server-client architecture and offers increased flexibility compared to previous ontological systems running under ROS.</li>
+<li><b>oracle</b>: This node is the oracle of the game, it generates a finite number of hypotheses and provides two services to interact with them:<ul>
+<li>hint_generator: It request a hint of an hypothesis.</li>
+<li>try_hypothesis: Check if my guess is correct.</li>
+</ul>
+</li>
+<li><b><a class="el" href="namespace_f_s_m.html">FSM</a></b>: Implement a finite state machine that simulates the investigation using smach. It has four clients that it uses to interact with other nodes. More information about the behavior of this node will be provided in the State Diagram section of the README.</li>
+<li><b><a class="el" href="namespaceturtle__controller.html">turtle_controller</a></b>: This node provides two services to command the turtlebot which simulates the investigator in the environment:<ul>
+<li>move_turtle_service: Move the turtle to the room you want.</li>
+<li>search_hint_service: Spin the turtle a random time to simulate searching for clues in a room.</li>
+</ul>
+</li>
+<li><b>turtlesim_node</b>: Standard node of ros.</li>
+</ul>
+<p><img src="/images/component.PNG?raw=true" alt="Alt text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+State Diagram</h2>
+<p>In the diagram below you can see all the states of the finite state machine implemented in the node "FSM" thanks to smach.</p>
+<ul>
+<li><b>EXPLORE</b>: In this state, the investigator moves to a random room to look for hints</li>
+<li><b>SEARCH_HINTS</b>: The investigator looks for a hint, once it is found if this ends the hypothesis and if the hypothesis is valid (complete and consistent) then it goes to the TRY_HYPOTHESIS state otherwise it goes back to the EXPLORE state. The cycle continues until a valid hypothesis is found.</li>
+<li><b>TRY_HYPOTHESIS</b>: The valid hypothesis found is tested, if it is correct the game ends, if wrong it returns to the EXPLORE state.</li>
+<li><b>Case solved</b>: Congratulation! You found the solution!</li>
+</ul>
+<p><img src="/images/state.PNG?raw=true" alt="Alt text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Temporal Diagram</h2>
+<p>In the diagram below you can see the behavior of the code over time.</p>
+<p>1) "update_ontology" is executed. 2) Once the ontology is ready (loaded and updated) the Oracle node generates a finite set of random hypotheses: 3 valid, 3 incomplete and 3 inconsistent. From the set of complete hypotheses it will choose a solution. 3) Now that all the services are ready also "FSM" can start and with it the investigation, which will end once the state machine has managed to find the hypothesis that "oracle" has chosen as the solution.</p>
+<p><img src="/images/temporal.PNG?raw=true" alt="Alt text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+RQT Graph</h2>
+<p>Graph generated by: </p><div class="fragment"><div class="line">rosrun rqt_graph rqt_graph</div>
+</div><!-- fragment --><p>Highlight all active nodes and subscriptions to related topics.</p>
+<p><img src="/images/rqt_graph.jpeg?raw=true" alt="Alt text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Cluedo Map</h2>
+<p>This image represents the cluedo map superimposed on the world of turtlesim. Unfortunately, there is no way with turtlesim to load an image in the background so the turtle moves in the rooms highlighted in this image however while the code runs the background of the map will remain blue without making explicit the room in which the turtle has just entered . To remedy this problem just read from the terminal, every time the investigator (the turtle) enters a room, the room in which she entered is written. Another solution is to keep this map within reach and see where the turtle is moving by making the comparison.</p>
+<p><img src="/images/turtle_map.PNG?raw=true" alt="Alt text" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+List of msgs, srvs and rosparameters</h2>
+<h3><a class="anchor" id="autotoc_md9"></a>
+msgs</h3>
+<ul>
+<li><b>Twist</b>: to publish the speeds and control the turtle</li>
+<li><b>Pose</b>: to subscribe and know the current position of the turtle </li>
+</ul>
+<h3><a class="anchor" id="autotoc_md10"></a>
+srvs</h3>
+<ul>
+<li><b>armor_interface_srv</b>: to interact with the armor node and the ontology</li>
+<li><b>hint_generator</b>: to request a hint from the oracle</li>
+<li><b>try_hypothesis</b>: to check if the hypothesis is correct</li>
+<li><b>move_service</b>: to move the turtle in rooms</li>
+<li><b>search_hint_service</b>: to move the turtle in a way that simulates searching for hints in a room </li>
+</ul>
+<h3><a class="anchor" id="autotoc_md11"></a>
+rosparameters</h3>
+<ul>
+<li><b>current_ID_hypothesis</b>: it gives you the ID of the current hypothesis</li>
+<li><b>current_murderer_hypothesis</b>: it gives you the murderers (if plural clearly the hypothesis is not valid) of the current hypothesis</li>
+<li><b>current_murder_weapon_hypothesis</b>: it gives you the murder weapons (if plural clearly the hypothesis is not valid) of the current hypothesis</li>
+<li><b>current_murder_place_hypothesis</b>: it gives you the murder places (if plural clearly the hypothesis is not valid) of the current hypothesis</li>
+<li><b>source1</b>: it gives you the first source of informations (PERSON)</li>
+<li><b>source2</b>: it gives you the second source of informations (WEAPON)</li>
+<li><b>source3</b>: it gives you the third source of informations (PLACE)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Put Correct Paths</h1>
+<p>Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"</p>
 <p>Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology" </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
