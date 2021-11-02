@@ -161,3 +161,6 @@ rosparam get /current_murder_weapon_hypothesis
 rosparam get /current_murder_place_hypothesis
 ```
 you can get the murderer, the murder weapon and the crime scene of the hypothesis that the investigator is currently making, in case of invalid hypotheses these could also be multiple.
+
+## Documentation
+All doxygen documentation can be found in the Doc folder.
