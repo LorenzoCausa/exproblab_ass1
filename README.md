@@ -80,8 +80,42 @@ This image represents the cluedo map superimposed on the world of turtlesim. Unf
 * **source2**: it gives you the second source of informations (WEAPON)
 * **source3**: it gives you the third source of informations (PLACE)
 
+## Installation and running procedure
+### Installation
+The installation is straightforward, just clone this repository to your ros workspace and do the catkin_make:
+```
+git clone https://github.com/LorenzoCausa/exproblab_ass1
+```
+```
+catkin_make
+```
+### Requirements
+To use this code some external packages are needed:
+* armor
+* smach
+* turtlesim
 
-## Put Correct Paths
+### Put Correct Paths
+Before you can run the code it is necessary to enter the correct paths for the cluedo_ontology and for where you want to save the finished ontology with all the hypotheses and the solution loaded.
+
 Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"
 
 Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology"
+
+**Note**: If you use the docker you gave us the paths are already written correctly
+
+### Running procedure
+Just use the launcher:
+```
+roslaunch exproblab_ass1 cluedo.launch 
+```
+If you prefer you can also run a node at a time. In this case it is good to run them in this order:
+1) armor
+2) turtlesim_node
+3) turtle_controller
+4) update_ontology
+5) wait that update_ontology finish
+6) oracle
+7) FSM 
+
+**Note**: smach_viewer is optional and it can be run in any moment 
