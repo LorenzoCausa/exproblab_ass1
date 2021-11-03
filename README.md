@@ -182,7 +182,8 @@ Possible improvements for the system are:
 * Generation of totally random hypotheses. At the moment they are pseudorandom (from a predetermined finite set) to limit the execution time of the system. Note that if we had the "intelligent" investigator of the previous point we could generate random hypotheses and still maintain a not too long execution time.
 
 ## Documentation
-All doxygen documentation can be found in the Doc folder.
+All the doxygen documentation is in the Doc folder or you can access it by clicking here:
+[click Here!](https://lorenzocausa.github.io/exproblab_ass1/)
 
 ## Author and contacts
 The system was developed entirely by me, below my credentials and contacts:
