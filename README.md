@@ -138,6 +138,7 @@ The system is designed for maximum flexibility and modularity. With very few mod
 * Simulated motion in the environment with turtlesim.
 * Modularity and flexibility.
 * Random-based generation of hints and the validation of hypothesis through armor.
+* Saving the ontology with the history of all the hypotheses made and the solution.
 
 Another feature of the system is the ability to retrieve information about the investigation while the code is running.
 
@@ -153,14 +154,27 @@ you can get the ID of the hypothesis that the investigator is currently making:
 Instead with:
 ```
 rosparam get /current_murderer_hypothesis 
-```
-```
+
 rosparam get /current_murder_weapon_hypothesis
-```
-```
+
 rosparam get /current_murder_place_hypothesis
 ```
 you can get the murderer, the murder weapon and the crime scene of the hypothesis that the investigator is currently making, in case of invalid hypotheses these could also be multiple.
 
+## Improvements
+Possible improvements for the system are:
+* Simulation in a more precise environment: a map with walls and rooms to better emulate the Cluedo game
+* "intelligent" investigator who manages to immediately discard wrong hypotheses: now he has to collect the whole hypothesis before being able to ask armor if it is valid, an important improvement could be to make it immediately discard a hypothesis as soon as it has a double field (two who or two what or two where).
+* Generation of totally random hypotheses. At the moment they are pseudorandom (from a predetermined finite set) to limit the execution time of the system. Note that if we had the "intelligent" investigator of the previous point we could generate random hypotheses and still maintain a not too long execution time.
+
 ## Documentation
 All doxygen documentation can be found in the Doc folder.
+
+## Author and contacts
+The system was developed entirely by me, below my credentials and contacts:
+
+**Lorenzo Causa, 4519089**
+
+**mail**: lorenzo.causa@libero.it
+
+**phone number**: 3247427182 
