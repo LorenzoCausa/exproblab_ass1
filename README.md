@@ -183,7 +183,7 @@ Possible improvements for the system are:
 
 ## Documentation
 All the doxygen documentation is in the Doc folder or you can access it by clicking here:
-[click Here!]{https://lorenzocausa.github.io/exproblab_ass1/}
+[click Here!](https://lorenzocausa.github.io/exproblab_ass1/)
 
 ## Author and contacts
 The system was developed entirely by me, below my credentials and contacts:
