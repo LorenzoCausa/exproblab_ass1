@@ -185,6 +185,8 @@ Possible improvements for the system are:
 All the doxygen documentation is in the Doc folder or you can access it by clicking here:
 [click Here!](https://lorenzocausa.github.io/exproblab_ass1/)
 
+**Note**: For some obscure reason, if from the github page you go to file and try to access the documentation of the FSM.py file, this will not be found. The problem is easily avoided by looking at the FSM documentation from the namespaces or by opening the documentation directly from the Doc folder after downloading the package locally.
+
 ## Author and contacts
 The system was developed entirely by me, below my credentials and contacts:
 
