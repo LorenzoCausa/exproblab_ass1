@@ -1,6 +1,0 @@
-string who
-string what
-string where
----
-bool ok
-
