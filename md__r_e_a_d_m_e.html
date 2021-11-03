@@ -23,9 +23,8 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">exproblab_ass1
-   &#160;<span id="projectnumber">Causa Lorenzo 4519089</span>
    </div>
-   <div id="projectbrief">first assignment of experimental robotics laboratory course</div>
+   <div id="projectbrief">Lorenzo Causa, 4519089</div>
   </td>
  </tr>
  </tbody>
@@ -146,9 +145,87 @@ rosparameters</h3>
 <li><b>source3</b>: it gives you the third source of informations (PLACE)</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md12"></a>
-Put Correct Paths</h1>
+Installation and running procedure</h1>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Installation</h2>
+<p>The installation is straightforward, just clone this repository to your ros workspace and do the catkin_make: </p><div class="fragment"><div class="line">git clone https://github.com/LorenzoCausa/exproblab_ass1</div>
+</div><!-- fragment --><div class="fragment"><div class="line">catkin_make</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+Requirements</h2>
+<p>To use this code some external packages are needed:</p><ul>
+<li>armor</li>
+<li>smach</li>
+<li>turtlesim</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Put Correct Paths</h2>
+<p>Before you can run the code it is necessary to enter the correct paths for the cluedo_ontology and for where you want to save the finished ontology with all the hypotheses and the solution loaded.</p>
 <p>Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"</p>
-<p>Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology" </p>
+<p>Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology"</p>
+<p><b>Note</b>: If you use the docker that was provided to us the paths are already written correctly.</p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Running procedure</h2>
+<p>Just use the launcher: </p><div class="fragment"><div class="line">roslaunch exproblab_ass1 cluedo.launch </div>
+</div><!-- fragment --><p>If you prefer you can also run a node at a time. In this case it is good to run them in this order: 1) armor 2) turtlesim_node 3) <a class="el" href="namespaceturtle__controller.html">turtle_controller</a> 4) <a class="el" href="namespaceupdate__ontology.html">update_ontology</a> 5) wait that <a class="el" href="namespaceupdate__ontology.html">update_ontology</a> finish 6) oracle 7) <a class="el" href="namespace_f_s_m.html">FSM</a></p>
+<p><b>Note</b>: smach_viewer is optional and it can be run in any moment</p>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Behavior</h1>
+<p>1) The investigator (the turtle) moves into a random room. 2) Look for hints in the room (turn on itself) 3) If with the last hint found concludes a valid hypothesis then it passes to 4. otherwise it restarts from 1. 4) Go to the Cluedo Room and test his hypothesis. If it is correct the case is solved, on the contrary it goes back to 1.</p>
+<p><b>Note</b>: This cycle continues until the case is solved, however the execution is never too long as each time a hypothesis is tested it is removed from the finite list of possible hypotheses.</p>
+<p><img src="/images/my_turtle_gif.gif?raw=true" alt="Alt Text" class="inline"/></p>
+<p>In the figure below you can also see all the windows of interest of the system:</p><ul>
+<li>the terminal</li>
+<li>the turtlesim_node node</li>
+<li>the smach_viewer node</li>
+</ul>
+<p><b>Note</b>: It was not possible to make the GIF with all the windows because the reduced resolution made the writings unreadable.</p>
+<p><img src="/images/screenshot.PNG?raw=true" alt="Alt Text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md18"></a>
+Video demo</h1>
+<p>You can take a look at the complete video demo of the project from here:</p>
+<p><a href="https://drive.google.com/file/d/16Gz2Lt-EQ11GA9QHAHYPvvqo3uU54BXt/view?usp=sharing">Video demo here</a></p>
+<h1><a class="anchor" id="autotoc_md19"></a>
+Working hypothesis and environment</h1>
+<p>The system is designed for maximum flexibility and modularity. With very few modifications, for example, both ontology and simulation can be changed.To avoid that the code lasts too long, it has been made so that every time a hypothesis is made, it is eliminated from the set of possible hypotheses. This is done also to simulate an intelligent investigator who does not repeat the same hypotheses. In the current code, a set of 9 randomly generated possible hypotheses is initialized: 3 valid, 3 incomplete, 3 inconsistent. The number of hypotheses can be easily expanded. In an earlier version of the code, the hypotheses were generated in a completely random way (not from a finite starting set) to better simulate the cluedo's investigation. With this version, however, the code ran for a very long time so to make it testable and debuggable the finite set of hypotheses was implemented.</p>
+<h1><a class="anchor" id="autotoc_md20"></a>
+System’s features</h1>
+<ul>
+<li>Elimination of already tried hypotheses.</li>
+<li>Simulated motion in the environment with turtlesim.</li>
+<li>Modularity and flexibility.</li>
+<li>Random-based generation of hints and the validation of hypothesis through armor.</li>
+<li>Saving the ontology with the history of all the hypotheses made and the solution.</li>
+</ul>
+<p>Another feature of the system is the ability to retrieve information about the investigation while the code is running.</p>
+<p>With: </p><div class="fragment"><div class="line">rosparam get /current_ID_hypothesis </div>
+</div><!-- fragment --><p>you can get the ID of the hypothesis that the investigator is currently making:</p><ul>
+<li>HP0, HP1, HP2 are valid hyotheses.</li>
+<li>HP3, HP4, HP5 are incomplete hypotheses.</li>
+<li>HP6, HP7, HP8 are inconsistent hypotheses.</li>
+</ul>
+<p>Instead with: </p><div class="fragment"><div class="line">rosparam get /current_murderer_hypothesis </div>
+<div class="line"> </div>
+<div class="line">rosparam get /current_murder_weapon_hypothesis</div>
+<div class="line"> </div>
+<div class="line">rosparam get /current_murder_place_hypothesis</div>
+</div><!-- fragment --><p>you can get the murderer, the murder weapon and the crime scene of the hypothesis that the investigator is currently making, in case of invalid hypotheses these could also be multiple.</p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+Improvements</h1>
+<p>Possible improvements for the system are:</p><ul>
+<li>Simulation in a more precise environment: a map with walls and rooms to better emulate the Cluedo game</li>
+<li>"intelligent" investigator who manages to immediately discard wrong hypotheses: now he has to collect the whole hypothesis before being able to ask armor if it is valid, an important improvement could be to make it immediately discard a hypothesis as soon as it has a double field (two who or two what or two where).</li>
+<li>Generation of totally random hypotheses. At the moment they are pseudorandom (from a predetermined finite set) to limit the execution time of the system. Note that if we had the "intelligent" investigator of the previous point we could generate random hypotheses and still maintain a not too long execution time.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md22"></a>
+Documentation</h1>
+<p>All the doxygen documentation is in the Doc folder or you can access it by clicking here: <a href="https://lorenzocausa.github.io/exproblab_ass1/">click Here!</a></p>
+<h1><a class="anchor" id="autotoc_md23"></a>
+Author and contacts</h1>
+<p>The system was developed entirely by me, below my credentials and contacts:</p>
+<p><b>Lorenzo Causa, 4519089</b></p>
+<p><b>mail</b>: <a href="#" onclick="location.href='mai'+'lto:'+'lor'+'en'+'zo.'+'ca'+'usa'+'@l'+'ibe'+'ro'+'.it'; return false;">loren<span style="display: none;">.nosp@m.</span>zo.c<span style="display: none;">.nosp@m.</span>ausa@<span style="display: none;">.nosp@m.</span>libe<span style="display: none;">.nosp@m.</span>ro.it</a></p>
+<p><b>phone number</b>: 3247427182 <br  />
+ </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
