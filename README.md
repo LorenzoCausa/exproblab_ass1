@@ -7,9 +7,9 @@ This is a ROS package that simulates a simple Cluedo-like investigation. It uses
 ### Component Diagram
 In the diagram below you can see all the nodes necessary for the correct functioning of the code. smach_viewer is not there as it is only useful for displaying the states while the code is running (so it is not necessary but optional).
 
-* **update_ontology**: This node loads "cluedo_ontology" into "armor" and adds all Cluedo hints. I add all individuals at the beginning for two reasons:
+* **update_ontology**: This node loads "cluedo_ontology" into "armor" and adds all Cluedo hints. I add all individuals at the beginning mainly for two reasons:
   1) Doing it only once at the beginning of everything decreases the number of REASON that ARMOR has to do, in fact every time an individual is added it is necessary to REASON twice: ADD, REASON, DISJOINT and REASON again.
-  2) It makes the system more flexible, in fact, by doing so "update_ontology" is the only node dependent on the hints, all the others nodes take them from the ontology. In this way it is possible to change, add and modify the hints by modifying only this node.
+  2) It makes the system more flexible, in fact, by doing so "update_ontology" is the only node dependent on the hints, all the others nodes take them from the ontology in "armor". In this way it is possible to change, add and modify the hints by modifying only this node.
 
     "update_ontology" also loads possible hint sources in rosparam: PERSON, WEAPON and PLACE. This node must be run after "armor" after it is completed "oracle" and "FSM" can be run.
 
