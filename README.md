@@ -151,6 +151,8 @@ You can take a look at the complete video demo of the project from here:
 ## Working hypothesis and environment
 The system is designed for maximum flexibility and modularity. With very few modifications, for example, both ontology and simulation can be changed.To avoid that the code lasts too long, it has been made so that every time a hypothesis is made, it is eliminated from the set of possible hypotheses. This is done also to simulate an intelligent investigator who does not repeat the same hypotheses. In the current code, a set of 9 randomly generated possible hypotheses is initialized: 3 valid, 3 incomplete, 3 inconsistent. The number of hypotheses can be easily expanded. In an earlier version of the code, the hypotheses were generated in a completely random way (not from a finite starting set) to better simulate the cluedo's investigation. With this version, however, the code ran for a very long time so to make it testable and debuggable the finite set of hypotheses was implemented.
 
+**Note**: All the hints to a hypothesis always come in the same order: murderers, murder weapons, murder place. This is done only to simplify the hint generation code. The finite state machine is completely independent from this, it could formulate the hypothesis with the hints arriving in completely random order.
+
 ## System’s features
 * Elimination of already tried hypotheses.
 * Simulated motion in the environment with turtlesim.
