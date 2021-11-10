@@ -128,7 +128,7 @@ If you prefer you can also run a node at a time. In this case it is good to run 
 1) The investigator (the turtle) moves into a random room.
 2) Look for hints in the room (turn on itself)
 3) If with the last hint found concludes a valid hypothesis then it passes to 4. otherwise it restarts from 1.
-4) Go to the Cluedo Room and test his hypothesis. If it is correct the case is solved, on the contrary it goes back to 1.
+4) Go to the Cluedo Room and test his hypothesis. If correct, the case is solved, on the contrary, it goes back to 1.
 
 **Note**: This cycle continues until the case is solved, however the execution is never too long as each time a hypothesis is tested it is removed from the finite list of possible hypotheses.
 
@@ -151,7 +151,7 @@ You can take a look at the complete video demo of the project from here:
 ## Working hypothesis and environment
 The system is designed for maximum flexibility and modularity. With very few modifications, for example, both ontology and simulation can be changed.To avoid that the code lasts too long, it has been made so that every time a hypothesis is made, it is eliminated from the set of possible hypotheses. This is done also to simulate an intelligent investigator who does not repeat the same hypotheses. In the current code, a set of 9 randomly generated possible hypotheses is initialized: 3 valid, 3 incomplete, 3 inconsistent. The number of hypotheses can be easily expanded. In an earlier version of the code, the hypotheses were generated in a completely random way (not from a finite starting set) to better simulate the cluedo's investigation. With this version, however, the code ran for a very long time so to make it testable and debuggable the finite set of hypotheses was implemented.
 
-**Note**: All the hints to a hypothesis always come in the same order: murderers, murder weapons, murder place. This is done only to simplify the hint generation code. The finite state machine is completely independent from this, it could formulate the hypothesis with the hints arriving in completely random order.
+**Note**: All the hints to a hypothesis always come in the same order: murderers, murder weapons, murder places. This is done only to simplify the hint generation code. The finite state machine is completely independent from this, it could formulate the hypothesis with the hints arriving in completely random order.
 
 ## System’s features
 * Elimination of already tried hypotheses.
