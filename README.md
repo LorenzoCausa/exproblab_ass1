@@ -99,6 +99,8 @@ To use this code some external packages are needed:
 * smach
 * turtlesim
 
+**Note**: If you use the docker that was provided to us these packages are already installed.
+
 ### Put Correct Paths
 Before you can run the code it is necessary to enter the correct paths for the cluedo_ontology and for where you want to save the finished ontology with all the hypotheses and the solution loaded.
 
