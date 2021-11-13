@@ -106,7 +106,11 @@ Before you can run the code it is necessary to enter the correct paths for the c
 
 Go in "update_ontology.py" and put the path in which there is your cluedo_ontology in the global variable "path_ontology"
 
+![Alt text](/images/cluedo_ontology.PNG?raw=true)
+
 Go in "FSM.py" and put the path in which you want to save your solution_ontology in the global variable "path_save_ontology"
+
+![Alt text](/images/case_solved.PNG?raw=true)
 
 **Note**: If you use the docker that was provided to us the paths are already written correctly.
 
