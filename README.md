@@ -120,32 +120,32 @@ Just use the launcher:
 roslaunch exproblab_ass1 cluedo.launch 
 ```
 If you prefer you can also run a node at a time. In this case it is good to follow this procedure:
-0) roscore
+1) roscore
 ```
 roscore
 ```
-1) armor
+2) armor
 ```
 rosrun armor execute it.emarolab.armor.ARMORMainService
 ```
-2) turtlesim_node
+3) turtlesim_node
 ```
 rosrun turtlesim turtlesim_node
 ```
-3) turtle_controller
+4) turtle_controller
 ```
 rosrun exproblab_ass1 turtle_controller.py 
 ```
-4) update_ontology
+5) update_ontology
 ```
 rosrun exproblab_ass1 update_ontology.py
 ```
-5) ( wait that update_ontology finish )
-6) oracle
+6) ( wait that update_ontology finish )
+7) oracle
 ```
 rosrun exproblab_ass1 oracle.py
 ```
-7) FSM 
+8) FSM 
 ```
 rosrun exproblab_ass1 FSM.py
 ```
