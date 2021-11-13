@@ -183,7 +183,7 @@ def main():
     turtle_search_hints_service = rospy.Service('search_hint_service', turtle_controller_srv, search_hints)
     
     rospy.spin()
-    sis.stop()
+    
 
 
 if __name__ == '__main__':
