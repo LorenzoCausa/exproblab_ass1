@@ -124,7 +124,7 @@ If you prefer you can also run a node at a time. In this case it is good to run 
 2) turtlesim_node
 3) turtle_controller
 4) update_ontology
-5) wait that update_ontology finish
+5) (wait that update_ontology finish)
 6) oracle
 7) FSM 
 
