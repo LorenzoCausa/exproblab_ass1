@@ -213,7 +213,7 @@ you can get the murderer, the murder weapon and the crime scene of the hypothesi
 Possible limitations of the system are:
 * Need to manually write the paths of the cluedo_ontology and the solved ontology.
 * It is necessary to keep a small set of possible hypotheses because otherwise the execution time becomes very long.
-* As mentioned before it is not possible to explicitly see the room in which the investigator is located.
+* As mentioned before it is not possible to explicitly see the room in which the investigator is located from turtlesim.
 
 ## Improvements
 Possible improvements for the system are:
