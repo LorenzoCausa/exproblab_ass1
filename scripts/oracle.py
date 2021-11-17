@@ -55,9 +55,9 @@ def cut_all_IRI(ind_array):
         ind_array[i] = cut_IRI(ind_array[i])
     return ind_array  
             
-def random_HP(hypotheses):
+def random_HP():
     """Generate finite random set of hipotheses, some correct, some wrong. Needed otherwhise to many possibilities would lead to a very long game """
-    global solution
+    global solution,hypotheses
     source1=rospy.get_param("source1")
     source2=rospy.get_param("source2")
     source3=rospy.get_param("source3")
@@ -250,7 +250,7 @@ def main():
     global hypotheses
     rospy.init_node('oracle')
     time.sleep(15) #wait that ontology is updated
-    random_HP(hypotheses)
+    random_HP()
      
     # PRINT SOLUTION
     print('SOLUTION')
