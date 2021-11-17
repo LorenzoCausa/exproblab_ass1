@@ -249,7 +249,7 @@ def main():
     """ Main of the node, it creates and provides the services. """
     global hypotheses
     rospy.init_node('oracle')
-    time.sleep(10) #wait that ontology is updated
+    time.sleep(15) #wait that ontology is updated
     random_HP(hypotheses)
      
     # PRINT SOLUTION
