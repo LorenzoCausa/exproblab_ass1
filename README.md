@@ -238,4 +238,4 @@ The system was developed entirely by me, below my credentials and contacts:
 
 ## Second assignment
 You can open the repo of the second assignment by clicking 
-[here](https://github.com/LorenzoCausa/exp_ass2_ws/tree/main/ass2_causa)
+[here](https://github.com/LorenzoCausa/exp_ass2_ws)
