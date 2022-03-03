@@ -235,3 +235,7 @@ The system was developed entirely by me, below my credentials and contacts:
 **mail**: lorenzo.causa@libero.it
 
 **phone number**: 3247427182  
+
+## Second assignment
+You can open the repo of the second assignment by clicking here
+[click Here!](https://github.com/LorenzoCausa/exp_ass2_ws/tree/main/ass2_causa)
